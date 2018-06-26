@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block titulo %}_-=SAPIC-Recuperar Contraseña=-_{% endblock titulo %}
+{% block extracss %}
+{% load staticfiles %}
+{% endblock extracss %}
+{% block extrajs %}
+{% endblock extrajs %}
+{% block contenido %}
+    <div class="contenido-sapic">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel-sapic">
+                    <h2 class="text-center">Olvide mi contraseña</h2>
+                    <!-- Importa el formulario de forget-->
+                    <form method="post"  enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-danger btn-block btn-fla">Recuperar cuenta</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock contenido %}

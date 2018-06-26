@@ -1,0 +1,2696 @@
+\documentclass[xcolor=dvipsnames]{beamer}
+<<<<<<< HEAD
+\usetheme{Berkeley}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{mathrsfs}
+\usepackage{amsmath}
+\usepackage{lmodern}
+\usepackage{multimedia}
+\usepackage{hyperref}
+\usepackage{varioref}
+\usepackage{ragged2e}
+\usepackage{etoolbox}
+\usepackage{lipsum}
+\usepackage{fancyvrb}
+\fvset{fontsize=\footnotesize}
+\RecustomVerbatimEnvironment{verbatim}{Verbatim}{}
+\apptocmd{\frame}{}{\justifying}{} % Allow optional arguments after frame.
+\usecolortheme[{rgb={0.6,0,0}}]{structure}
+\setbeamercovered{transparent}
+\setbeamertemplate{items}[ball]
+\setbeamertemplate{blocks}[rounded][shadow=true] 
+\beamertemplateshadingbackground{gray!50}{white!50}
+\newtheorem{Ejemplo}{Django}
+\useoutertheme{infolines}
+\title []{Framework Django 1.11}
+\author{Instructor Ing. Erwin Paredes}
+%\logo{ \includegraphics[height=3cm]{figura/logo-blanco2.png}}
+\institute{CENDITEL}
+\date{\today}
+
+\begin{document}
+
+\section{Cenditel}
+\begin{frame}
+\maketitle
+\end{frame}
+
+\subsection{La Fundación}
+\begin{frame}
+\begin{block}{Fundación CENDITEL}
+\indent   
+Somos el Centro Nacional de Desarrollo e Investigación en Tecnologías Libres, cuyas actividades son el desarrollo de proyectos con impacto tecnológico enmarcados en las áreas de Software, Hardware y Telecomunicaciones. 
+https://www.cenditel.gob.ve
+
+\end{block}
+\end{frame}
+
+\subsection{Finalidad del Curso}
+\begin{frame}
+\begin{block}{Finalidad}
+     
+Consolidar la comunidad de desarrollo en software libre alrededor de la tecnología, en este caso el framework de desarrollo Django del lenguaje de programación Python
+\end{block}
+\end{frame}
+
+\subsection{Contenido del Curso}
+\begin{frame}
+\begin{block}{Contenido del Curso}
+\begin{itemize}
+\item 
+Introducción
+\item 
+Configurar ambiente de trabajo
+\item 
+Crear proyecto
+\item 
+Crear aplicaciones y estructura del proyecto
+\item 
+Modelos y migraciones
+\item 
+Relaciones
+\item 
+Django shell y Querysets
+\item 
+Configurar URLs y primera views
+\item 
+Sistema de plantillas
+\item 
+Configurar archivos estáticos
+\item 
+Listar Registros
+\item 
+Formularios y vista para anexar registros
+\item 
+Vistas para modificar y eliminar registros
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+\begin{frame}
+\begin{block}{Contenido del Curso}
+\begin{itemize}
+\item
+ListView, CreateView, UpdateView, DeleteView   
+\item
+Crear Login
+\item
+Registro de Usuarios
+\item
+Decorador Login required
+\item
+Recuperar contraseña por correo
+\item
+Introducción a conceptos avanzados
+\end{itemize}
+\end{block}
+\end{frame}
+
+
+
+\section{Django}
+\subsection{Introducción}
+\begin{frame}
+Django: Es un entorno de trabajo para el desarrollo Web, basado en el lenguaje de programación Python.
+
+Un entorno de trabajo o framework, implica una estructura conceptual y conjunto de herramientas que típicamente son un conjunto de librerías, que permite organizar el desarrollo.
+
+Para el framework Django la estructura conceptual es el denominado MVC (Modelo Vista Controlador), esto es, se organiza el desarrollo en módulos que separan el modelo de datos, la interfaz o vista y el comportamiento.
+
+Por lo que para cada aplicación o módulo que conforma el proyecto se agrupa en lo siguientes archivos:
+
+\begin{itemize}
+ \item models.py :Contiene las clases que definen la estructura de datos
+ \item views.py  :Contiene la codificación de las funcionalidades que permiten controlar el comportamiento del sistema.
+ \item *.html    :Contiene la codificación de la interfaz 
+\end{itemize}
+\end{frame}
+
+\subsection{Configurar ambiente de trabajo}
+\begin{frame}[fragile]
+
+\begin{Large}\textbf{Sitio Oficial}\end{Large}
+\begin{verbatim}
+
+https://www.djangoproject.com/
+
+Instalación
+
+https://docs.djangoproject.com/en/1.11/intro/install
+
+Descarga:
+
+https://www.djangoproject.com/download/
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+
+\begin{Large}\textbf{Instalación}\end{Large}
+\begin{verbatim}
+// Descomprimir el archivo
+
+tar -xzvf Django1.11.tar.gz
+
+cd Django1.11
+
+python setup.py install
+
+// Comprobar la instalación del framework:
+
+python
+import django
+django.VERSION
+
+Ctrl + D
+\end{verbatim}
+\end{frame}
+
+\subsection{Crear proyecto}
+\begin{frame}[fragile]
+
+\begin{verbatim}
+// Crear el primer proyecto:
+
+django-admin startproject curso
+
+// este comando crea la siguiente infraestructura
+de carpetas y archivos:
+
+curso/
+    manage.py
+    curso/
+        __init__.py
+        settings.py
+        urls.py
+        wsgi.py
+
+
+Configurar la base de datos
+
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+
+\begin{verbatim}
+// Se debe haber instalado el gestor de la Base de
+Datos Postgresql  y la librería de conexión psycopg2
+// Creamos la base de datos:
+su postgres
+psql
+CREATE USER administrador;
+CREATE DATABASE curso;
+
+// Se edita el archivo curso/settings.py la constante
+DATABASES = {
+   'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'curso',
+        'USER': 'administrador',
+        'PASSWORD': 'clave',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
+  } }
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+// Se guarda y ejecuta el siguiente comando para
+crear las tablas iniciales del proyecto:
+
+python manage.py migrate
+
+// Se ejcuta el comando para crear el superusuario o 
+usuario administrador del proyecto:
+
+python manage.py createsuperuser
+
+// Se introducen los datos que solicita
+// Se ejecuta el siguiente comando para activar el 
+servidor de prueba de forma local
+
+python manage.py runserver
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+python manage.py runserver
+
+// Arroja el siguiente mensaje
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+July 26, 2017 - 15:32:30
+Django version 1.11.3,using settings 'curso.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+// Abrimos el navegador de preferencia y colocamos la
+siguiente dirección para acceder al sistema
+administrativo del proyecto:
+
+http://localhost:8000/admin
+\end{verbatim}
+\end{frame}
+
+\subsection{Crear aplicaciones}
+\begin{frame}[fragile]
+\begin{verbatim}
+
+http://localhost:8000/admin
+
+// En el debemos autenticarnos con el usuario y
+password del superusuario creado en los pasos
+anteriores
+
+// Allí podemos gestionar los usuarios del sistema
+así como los grupos que evenctualmente se utilizan 
+para asignar permisos de acceso.
+
+// En el terminal presionar las teclas Ctrl + C para
+interrumpir la ejecución del servidor y así crear 
+las aplicaciones del proyecto.
+
+python manage.py startapp encuesta
+
+\end{verbatim}
+\end{frame}
+
+\subsection{Modelos}
+\begin{frame}[fragile]
+\begin{verbatim}
+python manage.py startapp encuesta
+
+// Se edita el archivo encuesta/models.py
+
+from django.db import models
+
+class Question(models.Model):
+    question_text = models.CharField(max_length=200)
+    pub_date =models.DateTimeField('date published')
+
+class Choice(models.Model):
+    question = models.ForeignKey(Question, 
+               on_delete=models.CASCADE)
+    choice_text = models.CharField(max_length=200)
+    votes = models.IntegerField(default=0)
+
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+// Almacenamos y editamos el archivo 
+curso/settings.py la constante:
+
+INSTALLED_APPS = [
+    ...
+    'django.contrib.staticfiles',
+    'encuesta',
+]
+
+// Para crear las tablas correspondiente de models.py
+se ejecuta el comando:
+
+python manage.py makemigrations encuesta
+
+python manage.py migrate encuesta
+
+\end{verbatim}
+\end{frame}
+
+\subsection{Relaciones}
+\begin{frame}[fragile]
+\begin{verbatim}
+// Para el manejo de las tablas por medio del 
+framework se puede realizar desde el terminal 
+con el comando:
+
+python manage.py shell
+
+
+\end{verbatim}
+\end{frame}
+
+\subsection{Django shell y Querysets}
+\begin{frame}[fragile]
+\begin{verbatim}
+
+// Allí podemos ejecutar las siguientes instrucciones
+
+from encuesta.models import Question, Choice
+from django.utils import timezone
+
+Question.objects.all()
+q = Question(question_text="Que hay de nuevo?", 
+                     pub_date=timezone.now())
+q.save()
+q.id
+q.question_text
+q.pub_date
+q.question_text = "Q ai d nuevo?"
+q.save()
+
+Ctril + D para salir
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+Editamos nuevamente el archivo encuesta/models.py 
+para añadir el sigueinte metodo a la clase Question
+
+import datetime
+
+from django.db import models
+from django.utils import timezone
+
+class Question(models.Model):
+    # ...
+    def was_published_recently(self):
+        return self.pub_date >= timezone.now() -
+                      datetime.timedelta(days=1)
+
+Guardamos y volvemos a terminal:
+
+python manage.py shell
+
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+from polls.models import Question, Choice
+
+Question.objects.all()
+q = Question.objects.get(pk=1)
+q.was_published_recently()
+
+q = Question.objects.filter(id=1)
+
+q = Question.objects.filter(
+          question_text__startswith='Q')
+
+from django.utils import timezone
+current_year = timezone.now().year
+Question.objects.get(pub_date__year=current_year)
+
+Question.objects.get(id=2) Error...
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+q = Question.objects.get(pk=1)
+q.choice_set.all()
+q.choice_set.create(choice_text='No mucho', votes=0)
+q.choice_set.create(choice_text='Muchas cosas' 
+                                           ,votes=0)
+c = q.choice_set.create(choice_text='De todo un poco'
+                                           ,votes=0)
+
+c.question
+
+q.choice_set.all()
+q.choice_set.count()
+
+Crtl + D para salir
+
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+Incluir el modelo de la aplicación encuesta 
+en el sistema admin:
+
+Editamos el archivo encuesta/admin.py
+from django.contrib import admin
+
+from .models import Question
+
+admin.site.register(Question)
+
+Guardamos y ejecutamos el servidor 
+de prueba nuevamente:
+
+python manage.py runserver
+
+en el navegador http://localhost:8000/admin
+
+\end{verbatim}
+\end{frame}
+
+\subsection{Configurar URLs y primera views}
+\begin{frame}[fragile]
+\begin{verbatim}
+Crear la primera vista para acceso del proyecto 
+Editamos el archivo encuesta/urls.py
+
+from django.conf.urls import url
+from . import views
+urlpatterns = [
+    # ex: /encueta/
+    url(r'^$', views.index, name='index'),
+    # ex: /encuesta/5/
+    url(r'^(?P<question_id>[0-9]+)/$', 
+    views.detail, name='detail'),
+    # ex: /encuesta/5/results/
+    url(r'^(?P<question_id>[0-9]+)/results/$',
+    views.results, name='results'),
+    # ex: /encuesta/5/vote/
+    url(r'^(?P<question_id>[0-9]+)/vote/$',
+     views.vote, name='vote'),
+]
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+Editamos el archivo encuesta/views.py:
+
+from django.http import HttpResponse
+from .models import Question
+
+def index(request):
+    question_list = Question.objects.order_by('-pub_date')[:5]
+    output = ', '.join([q.question_text for q in question_list])
+    return HttpResponse(output)
+
+def detail(request, question_id):
+    return HttpResponse("Question No: %s." % question_id)
+
+def results(request, question_id):
+    response = "Results of question %s." 
+    return HttpResponse(response % question_id)
+
+def vote(request, question_id):
+    return HttpResponse("Voting on question %s." % question_id)
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+Guardamos y ejecutamos el servidor de prueba y 
+probamos los enlaces desde el navegador:
+
+python manage.py runserver
+
+En el navegador probamos los siguientes enlaces:
+
+http://localhost:8000/encueta
+http://localhost:8000/encueta/1
+http://localhost:8000/encueta/1/result
+http://localhost:8000/encueta/1/vote
+
+\end{verbatim}
+\end{frame}
+
+\subsection{Sistema de plantillas}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+Uso del plantillas:
+
+Creamos la siguiente estructura
+
+cd encuesta
+mkdir templates
+mkdir templates/encuesta
+
+y editamos el archivo index.html allí
+
+gedit encuesta/templates/encuesta/index.html
+
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+{% if question_list %}
+    <ul>
+    {% for question in question_list %}
+        <li>
+         <a href="/encuesta/{{ question.id }}/">
+          {{
+            question.question_text
+          }}
+         </a>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No hay encuestas.</p>
+{% endif %}
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+Guardamos y modificamos el archivo encuesta views.py 
+para que utilice la plantilla
+
+from django.http import HttpResponse
+from django.template import loader
+
+from .models import Question
+
+
+def index(request):
+    question_list = Question.objects.order_by('-pub_date')[:5]
+    template = loader.get_template('polls/index.html')
+    context = {
+        'question_list': question_list,
+    }
+    return HttpResponse(template.render(context, request))
+
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+o utilizando la shortcuts render
+
+from django.shortcuts import render
+
+from .models import Question
+
+
+def index(request):
+    question_list = Question.objects.order_by('-pub_date')[:5]
+    context = {'question_list': question_list}
+    return render(request, 'polls/index.html', context)
+
+
+\end{verbatim}
+\end{frame}
+
+\subsection{Configurar estáticos}
+\begin{frame}[fragile]
+\begin{verbatim}
+Descargar plantillas prediseñadas, por ejemplo:
+
+https://adminlte.io/
+
+Copiar los directorios ccs y js en los en la carpeta static
+
+Copiar los archivo *.html en la carpeta templates
+
+Editar index.html y cambiar los enlaces a cada archivo en:
+
+<link rel="stylesheet" 
+href="{% static 'css/DataTables/jquery.dataTables.min.css' %}">
+
+\end{verbatim}
+\end{frame}
+
+\subsection{Listar Registros}
+\begin{frame}[fragile]
+\begin{verbatim}
+Creamos el archivo ajax.py
+
+# -*- encoding: utf-8 -*-
+from django.conf import settings
+from django_datatables_view.base_datatable_view import (
+   BaseDatatableView)
+   
+from django.contrib.auth.models import (
+    User)
+
+class ListUsersAjaxView(BaseDatatableView):
+    model = User
+    columns = ['pk','first_name','last_name','username','email',
+               'date_joined', 'last_joined' ]
+    order_columns = ['pk', 'username']
+    max_display_length = 500
+    
+    def __init__(self):
+        super(ListUsersAjaxView, self).__init__()
+
+    def get_initial_queryset(self):
+        return self.model.objects.all()
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+def prepare_results(self, qs):
+  json_data = []
+  for item in qs:
+    json_data.append([
+      username,
+     "{0} {1}".format(str(item.first_name),str(item.last_name)),
+      item.email,
+      item.date_joined.strftime("%Y-%m-%d %H:%M:%S"),
+      last_login                
+    ])
+            
+  return json_data
+# Fin del archivo ajax.py
+
+#En el archivo urls.py anexar las siguientes lineas
+from .ajax import *
+
+urlpatterns = [
+    ....
+url(r'^listar-users/$', ListUsersAjaxView.as_view(),
+        name="listar_users"),
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+Se anexa el siguiente código el archivo index.html
+En la parte visual:
+
+<div id="datatable"></div>
+
+Y en la parte de código javascript
+
+<script type="text/javascript">
+$(document).ready(function() {
+   $('#datatable').dataTable({
+        "processing": true,
+        "serverSide": true,
+        "ajax": {% url 'listar_user'%},
+        language: {url: JSON_DATA}
+        });
+    $('#datatable')
+        .removeClass('display')
+        .addClass('table table-striped table-bordered');
+});
+</script>
+\end{verbatim}
+\end{frame}
+
+\subsection{Anexar registros}
+\begin{frame}[fragile]
+\begin{verbatim}
+Creamos el método en el archivo views.py
+
+def AnexarRegistro(request):
+    if request.method == 'POST':
+        
+        vusername = request.POST['username']
+        u = User(username = vusername)
+        u.save()
+        message = _("El usuario fue creado")
+        template = loader.get_template('personal/profile.html')
+    context = {'message':message}
+    return HttpResponse(template.render(context, request))
+       
+\end{verbatim}
+\end{frame}
+
+\subsection{Modificar y eliminar registros}
+\begin{frame}[fragile]
+\begin{verbatim}
+@login_required
+def change_profile(request):
+    """ Cambiar perfil de usuario
+    """
+    if request.method == 'POST':
+        user_id = request.POST['user_id']
+        personal = User.objects.get(user_id=request.user.id)               
+        personal.first_name = request.POST['fname']
+        personal.last_name = request.POST['lname']
+        personal.email = request.POST['email']
+        personal.is_active = request.POST.get('is_active')
+        personal.user.save()
+        
+        message = _("The profile change was made")
+	context = {'personal':personal,'message':message,}
+    template = loader.get_template('personal/profile.html')
+    return HttpResponse(template.render(context, request))
+<<<<<<< HEAD
+=======
+
+\end{verbatim}
+\end{frame}
+>>>>>>> f837b9d91ddf1c492cd58e875f097fb99eb9339c
+
+\begin{frame}[fragile]
+\begin{verbatim}
+@login_required
+def delete_personal(request):
+    """ Delete users 
+    """
+    id = json.loads(request.POST['seleccionados'])
+    print id 
+ 
+    for id_values in id:
+        if id_values["id"] != "0":
+	           
+            u = User.objects.get(pk=int(id_values["id"]))
+            u.delete()   
+	   
+    return redirect('personal')
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+@login_required
+def delete_personal(request):
+    """ Delete users 
+    """
+    id = json.loads(request.POST['seleccionados'])
+    print id 
+ 
+    for id_values in id:
+        if id_values["id"] != "0":
+	           
+            u = User.objects.get(pk=int(id_values["id"]))
+            u.delete()   
+	   
+    return redirect('personal')
+\end{verbatim}
+\end{frame}
+
+\subsection{View's}
+\begin{frame}[fragile]
+\begin{verbatim}
+####  ListView
+
+# En el archivo views.py
+
+from django.views.generic.list import ListView
+from django.utils import timezone
+
+from articles.models import Article
+
+class ArticleListView(ListView):
+
+    model = Article
+
+    def get_context_data(self, **kwargs):
+        context = super(ArticleListView, 
+                        self).get_context_data(**kwargs)
+        context['now'] = timezone.now()
+        return context
+
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+
+# En el archivo urls.py
+from django.conf.urls import url
+
+from article.views import ArticleListView
+
+urlpatterns = [
+ url(r'^$',ArticleListView.as_view(),name='article-list'),
+]
+
+# El template
+<h1>Articles</h1>
+<ul>
+{% for article in object_list %}
+    <li>
+    {{ article.pub_date|date }} - {{ article.headline }}
+    </li>
+{% empty %}
+    <li>No articles yet.</li>
+{% endfor %}
+</ul>
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+#### DetailView
+
+# En el archivo views.py
+
+from django.views.generic.detail import DetailView
+from django.utils import timezone
+
+from articles.models import Article
+
+class ArticleDetailView(DetailView):
+
+    model = Article
+
+    def get_context_data(self, **kwargs):
+        context = super(ArticleDetailView, self).
+                  get_context_data(**kwargs)
+        context['now'] = timezone.now()
+        return context
+        
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+
+# En el archivo urls.py
+
+from django.conf.urls import url
+
+from article.views import ArticleDetailView
+
+urlpatterns = [
+ url(r'^(?P<slug>[-\w]+)/$',ArticleDetailView.as_view(),
+                            name='article-detail'),
+]
+
+# El template
+
+<h1>{{ object.headline }}</h1>
+<p>{{ object.content }}</p>
+<p>Reporter: {{ object.reporter }}</p>
+<p>Published: {{ object.pub_date|date }}</p>
+<p>Date: {{ now|date }}</p>
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+#### CreateView
+
+from django.views.generic.edit import CreateView
+from myapp.models import Author
+
+class AuthorCreate(CreateView):
+    model = Author
+    fields = ['name']
+
+# En el template
+
+<form action="" method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Save" />
+</form>
+
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+#### UpdateView
+
+from django.views.generic.edit import UpdateView
+from myapp.models import Author
+
+class AuthorUpdate(UpdateView):
+    model = Author
+    fields = ['name']
+    template_name_suffix = '_update_form'
+    
+# En el template
+
+<form action="" method="post">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Update" />
+</form>
+
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+#### DeleteView
+
+from django.views.generic.edit import DeleteView
+from django.urls import reverse_lazy
+from myapp.models import Author
+
+class AuthorDelete(DeleteView):
+    model = Author
+    success_url = reverse_lazy('author-list')
+    
+# En el template
+
+<form action="" method="post">{% csrf_token %}
+    <p>Are you sure you want to delete "{{ object }}"?</p>
+    <input type="submit" value="Confirm" />
+</form>
+
+\end{verbatim}
+\end{frame}
+
+\subsection{Crear Login}
+\begin{frame}[fragile]
+\begin{verbatim}
+Creamos la aplicacion user desde la consola:
+
+python manage.py startapp user
+
+Editamos el archivo user/views.py:
+
+# -*- coding: utf-8 -*-
+<<<<<<< HEAD
+
+from django.shortcuts import render
+from django.contrib import messages
+from django.contrib.auth import (
+    authenticate, logout, login
+)
+from django.contrib.auth.models import (
+    Group, Permission, User
+)
+
+=======
+
+from django.shortcuts import render
+from django.contrib import messages
+from django.contrib.auth import (
+    authenticate, logout, login
+)
+from django.contrib.auth.models import (
+    Group, Permission, User
+)
+
+>>>>>>> f837b9d91ddf1c492cd58e875f097fb99eb9339c
+class LoginView(FormView):
+    form_class = FormularioLogin
+    template_name = 'users.login.html'
+    success_url = '/inicio/'
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+def form_valid(self, form):
+        
+    usuario = form.cleaned_data['usuario']
+    contrasena = form.cleaned_data['contrasena']
+    usuario = authenticate(username=usuario,password=contrasena)
+        
+    if usuario is not None:
+        login(self.request, usuario)
+        messages.info(self.request,'Bienvenido %s has ingresado\
+                                    Sistema con el usuario %s \
+                                    ' % (usuario.first_name,
+                                         usuario.username))
+    else:
+        self.success_url = reverse_lazy('users:login')
+        messages.warning(self.request,'Verifique su nombre y \
+                                       contraseña\
+                                      y vuelve a intertar')
+
+    return super(LoginView, self).form_valid(form)
+ 
+\end{verbatim}
+\end{frame}
+
+\subsection{Registro de Usuarios}
+\begin{frame}[fragile]
+\begin{verbatim}
+#### Crear Permisos desde el shell ejecutar
+
+from myapp.models import BlogPost
+from django.contrib.auth.models import Permission
+from django.contrib.contenttypes.models import ContentType
+
+content_type = ContentType.objects.get_for_model(BlogPost)
+permission = Permission.objects.create(
+    codename='can_publish',
+    name='Can Publish Posts',
+    content_type=content_type,
+)
+
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+
+from django.contrib.auth.models import Permission, User
+from django.contrib.contenttypes.models import ContentType
+from django.shortcuts import get_object_or_404
+
+from myapp.models import BlogPost
+
+def user_gains_perms(request, user_id):
+    user = get_object_or_404(User, pk=user_id)
+    # any permission check will 
+    #cache the current set of permissions
+    user.has_perm('myapp.change_blogpost')
+
+    content_type=ContentType.objects.get_for_model(BlogPost)
+    permission = Permission.objects.get(
+        codename='change_blogpost',
+        content_type=content_type,
+    )
+    user.user_permissions.add(permission)
+
+\end{verbatim}
+\end{frame}
+
+\subsection{Login required}
+\begin{frame}[fragile]
+\begin{verbatim}
+
+from django.contrib.auth.decorators import 
+  login_required, permission_required
+from django.views.generic import TemplateView
+
+from .views import VoteView
+
+urlpatterns = [
+    url(r'^about/$', login_required(
+           TemplateView.as_view(template_name="secret.html"))),
+    url(r'^vote/$', permission_required(
+           'polls.can_vote')(VoteView.as_view())),
+]
+
+\end{verbatim}
+\end{frame}
+
+\subsection{Recuperar contraseña por correo}
+\begin{frame}[fragile]
+\begin{verbatim}
+def newpassword(request):
+    puser = request.POST['puser']
+    try:
+        user = User.objects.get(username=puser)
+        randompass = ''.join([choice(
+        '1234567890qwertyuiopasdfghjklzxcvbnm') 
+        for i in range(10)])
+        print randompass
+        subject = _('System: New Password')
+        message = _('Your password is reset, new password: ')
+                    + randompass
+        user.email_user("subject","message")
+        user.set_password(randompass)
+        user.save()
+    except:
+        print "error send mail"
+        mensaje = _("User not found")
+    return redirect('/authenticate/signin')
+ 
+\end{verbatim}
+\end{frame}
+
+\subsection{Conceptos avanzados}
+\begin{frame}[fragile]
+\begin{verbatim}
+Otros conceptos
+
+* Internacionalización
+* Zonas Horarias
+* Servidor Web
+* Geodjango
+* Django Rest
+
+ Entre otros...
+<<<<<<< HEAD
+=======
+
+\end{verbatim}
+\end{frame}
+
+\subsection{Geodjango}
+\begin{frame}[fragile]
+\begin{verbatim}
+Para la gestión de datos geolocalizados debe utilizar 
+una extensión de django denominada Geodjango
+
+Instalación de componentes para la gestión de mapas
+en particular la extensión django.contrib.gis
+
+Entrar como root para la instalacion
+
+aptitude install python3.4 python3-pip python3.4-dev 
+python3-setuptools
+
+aptitude install python3-virtualenv virtualenvwrapper
+
+Salir del modo root y crear el ambiente:
+
+$ mkvirtualenv --python=/usr/bin/python3 geodjango
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+Instalar los requerimientos del proyecto
+
+Para activar el ambiente virtual geodjango ejecute el comando:
+
+$ workon geodjango
+
+Quedando activado el entorno virtual de esta manera.
+
+(geodjango)$
+
+Crear el archivo requerimientos.txt
+vim requerimientos.txt
+
+*** Inicio del archivo requerimientos.txt
+Django==1.11.4
+psycopg2==2.7.1
+pytz==2017.2
+*** fin del archivo requeimientos.txt
+
+Ejecutar el comando de descarga e instalación
+pip install -r requeimientos.txt
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+Crear el proyecto geodjango-demo
+
+django-admin startproject geodjango-demo
+
+cd geodjango-demo
+
+Crear base de datos y Migrar los modelos
+>>>>>>> f837b9d91ddf1c492cd58e875f097fb99eb9339c
+
+Como super usuario instalar postgis:
+
+aptitude install postgis
+
+aptitude install postgresql-x.x-postgis-x.x
+
+Nota: las x.x debe ser sustituidad por la versión de 
+Postgres instalada
+\end{verbatim}
+\end{frame}
+
+<<<<<<< HEAD
+=======
+\begin{frame}[fragile]
+\begin{verbatim}
+Ingresar a la consola de postgres con la siguiente orden:
+$ psql
+
+Ejecutar la siguiente sentencia estando en la consola de 
+postgres:
+
+postgres=# CREATE DATABASE geodjango OWNER=postgres;
+postgres=#  \q
+
+$ psql geodjango
+
+geodjango=# CREATE EXTENSION postgis;
+geodjango=# \q
+
+Editar el archivo geodjango-demo/settings.py
+
+INSTALLED_APPS = [
+    ...
+    'django.contrib.gis',
+]
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+Modificar la conexión para la base de datos:
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'geodjango',
+        'USER': 'administrador',
+        'PASSWORD': 'clave',
+        'HOST': 'localhost',
+        'PORT': '5432',
+        'ATOMIC_REQUESTS': True, 
+        # Crea transacciones en cada peticion de la vista
+    }
+}
+
+Para migrar los modelos del proyecto se debe usar 
+el siguiente comando:
+
+(geodjango)$ python manage.py makemigrations
+(geodjango)$ python manage.py migrate
+(geodjango)$ python manage.py createsuperusuer
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+Creamos la aplicación geolocation
+(geodjango)$ python manage.py startapp geolocation
+
+Creamos el archivos geolocation/urls.py
+# -*- coding: utf-8 -*-
+from django.conf.urls import url
+from .views import *
+urlpatterns = [
+                url(r'^register-poly/',
+                    RegisterPolyView.as_view(),
+                    name="register_poly"),
+                url(r'^list-zipcode/',
+                    ListZipcodeView.as_view(),
+                    name="list_zipcode"),
+                url(r'^delete-zipcode/(?P<pk>\d+)/',
+                    ZipcodeDeleteView.as_view(),
+                    name="delete_zipcode"),
+                url(r'update-zipcode/(?P<pk>\d+)/$',
+                    ZipCodeUpdate.as_view(),
+                    name='update_zipcode')
+              ]
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+Modificar el archivo geolocation/views.py
+
+# -*- coding: utf-8 -*-
+from django.contrib import messages
+from django.contrib.messages.views import SuccessMessageMixin
+from django.urls import reverse_lazy
+from django.views.generic.edit import (
+    FormView, DeleteView, UpdateView
+    )
+from django.views.generic import ListView
+
+from .forms import *
+from .models import *
+
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+class RegisterPolyView(FormView):
+    form_class = ZipcodeForms
+    template_name = 'geodjango-template.html'
+    success_url = '/geolocation/register-poly/'
+    def form_valid(self, form, **kwargs):
+        new_zipcode = form.save()
+        messages.success(self.request, 
+        "ZipCode %s, registrado con exito" % (str(new_zipcode)))
+        return super(RegisterPolyView, self).form_valid(form)
+class ListZipcodeView(ListView):
+    model = Zipcode
+    template_name = 'geodjango-list.html'
+    paginate_by = 3
+class ZipcodeDeleteView(DeleteView):
+    model = Zipcode
+    success_url = reverse_lazy('geolocation:list_zipcode')
+class ZipCodeUpdate(UpdateView, SuccessMessageMixin):
+    model = Zipcode
+    form_class = ZipcodeForms
+    success_message = 'ZipCode Actualizado con exito'
+    success_url = reverse_lazy('geolocation:list_zipcode')
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+Editar el archivo admin.py
+# -*- coding: utf-8 -*-
+from django.contrib.gis import admin
+from .models import *
+admin.site.register(Zipcode, admin.OSMGeoAdmin)
+
+Editar el archivo apps.py
+from django.apps import AppConfig
+class GeolocationConfig(AppConfig):
+    name = 'geolocation'
+
+Editar el archivo forms.py
+# -*- coding: utf-8 -*-
+from django.contrib.gis import forms
+from .models import *
+
+class ZipcodeForms(forms.ModelForm):
+    class Meta:
+        model = Zipcode
+        fields = '__all__'
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+    def __init__(self, *args, **kwargs):
+        super(ZipcodeForms, self).__init__(*args, **kwargs)
+        self.fields['code'].widget.attrs.update(
+           {'class': 'form-control','placeholder': 'Zip Code'})
+        self.fields['code'].label = 'Zip Code'
+        self.fields['code'].required = True
+
+        # Se le agrega la ruta donde se construye el mapa 
+        # con el default_zoom
+        self.fields['poly'].widget = 
+         forms.OSMWidget.template_name = 'openlayers-cust.html'
+
+        # Se le agrega al campo los atributos que por defecto 
+        # tiene la ubicacion (lat lon) de Venezuela
+        # Con un zoom por defecto de 5.2 y
+        # Un alto y ancho de 600X400
+        self.fields['poly'].widget = forms.OSMWidget(attrs={
+                         'default_zoom': 5.2, 'map_width': 600,
+                         'map_height': 400, 'default_lat': 8,
+                         'default_lon': -66})
+        self.fields['poly'].label = 'Cordenadas Poligonales'
+        self.fields['poly'].required = True
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+Editar el archivo models.py
+# -*- coding: utf-8 -*-
+from django.contrib.gis.db import models
+
+class Zipcode(models.Model):
+    code = models.CharField(max_length=5) #Campo del ZipCode
+    poly = models.PolygonField() #Campo de la poligonal
+    class Meta:
+        ordering = ('code',)
+        verbose_name = 'Zipcode'
+        verbose_name_plural = 'Zipcodes'
+    def __str__(self):
+        return self.code
+class Elevation(models.Model):
+    name = models.CharField(max_length=100)
+    rast = models.RasterField()
+    class Meta:
+        ordering = ('name',)
+        verbose_name = 'Elevation'
+        verbose_name_plural = 'Elevations'
+    def __str__(self):
+        return self.name
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+Editar el archivo geodjango-demo/settings.py
+
+INSTALLED_APPS = [
+    ...
+    'django.contrib.gis',
+    'geolocation',
+]
+
+Guardamos y ejecutamos el comando 
+(geodjango)$ python manage.py makemigrations geolocation
+(geodjango)$ python manage.py migrate geolocation
+
+Editamos el Templates para lo cual creamos la carpeta templates
+y creamos los archivos geodjango-template.html y 
+geodjango-list.html
+
+mkdir geolocation/templates
+cd geolocation/templates
+
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+Archivo geodjango-list.html
+{% extends "admin/base.html" %}
+{% block title %}Listar Zipcode {% endblock title %}
+{% block branding %}
+    <h1 id="site-name"><a href="{% url 'admin:index' %}">
+    Demo-GeoDjango</a></h1>
+{% endblock %}
+{% block breadcrumbs %}
+    <div class="breadcrumbs">
+    <a href="{% url 'geolocation:register_poly' %}">
+    Registrar ZipCode</a>/
+    <a href="{% url 'geolocation:list_zipcode' %}">
+    Listar ZipCode</a>
+    {% if title %} &rsaquo; {{ title }}{% endif %}
+    </div>
+{% endblock breadcrumbs%}
+{% block content %}
+    <h1>Zip Codes</h1>
+    <table><thead><tr><th>ZipCodes</th>
+                      <th>Coordenadas</th>
+                      <th>Acciones</th></tr></thead>
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+    {% for zips in object_list %}
+        <tbody><tr>
+         <td>{{ zips.code }}</td>
+         <td>{{ zips.poly }}</td>
+         <td><a title="Editar" class="changelink" 
+          href="{% url 'geolocation:update_zipcode' zips.pk %}">
+          </a>
+         <a title="Eliminar" class="deletelink" 
+          href="{% url 'geolocation:delete_zipcode' zips.pk %}">
+          </a>
+         </td></tr></tbody>
+    {% empty %}
+        <tbody>
+            <tr><td>No hay zipcode.</td></tr>
+        </tbody>
+    {% endfor %}
+ 
+    </table>
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+
+    {% if is_paginated %}
+        <div class="pagination">
+            <span class="page-links">
+                {% if page_obj.has_previous %}
+<a href="/geolocation/list-zipcode/?page=
+{{ page_obj.previous_page_number }}">Anterior</a>
+                {% endif %}
+                <span class="page-current">
+Página {{ page_obj.number }}de{{ page_obj.paginator.num_pages }}
+                </span>
+                {% if page_obj.has_next %}
+<a href="/geolocation/list-zipcode/?page=
+{{ page_obj.next_page_number }}">Siguiente</a>
+                {% endif %}
+          </span>
+        </div>
+    {% endif %}
+{% endblock content %}
+""" Fin del archivo geodjango-list.html
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+""" Archivo geodjango-templates.html
+{% extends "admin/base.html" %}
+{% block title %}Registrar Zipcode {% endblock title %}
+{% block extrastyle %}{{ form.media }}{% endblock extrastyle %}
+{% block branding %}  <h1 id="site-name">
+<a href="{% url 'admin:index' %}">Demo-GeoDjango</a></h1>
+{% endblock branding %}
+{% block breadcrumbs %}
+    <div class="breadcrumbs">
+    <a href="{% url 'geolocation:register_poly' %}">
+    Registrar ZipCode</a>
+    <a href="{% url 'geolocation:list_zipcode' %}">
+    Listar ZipCode</a>
+    {% if title %} &rsaquo; {{ title }}{% endif %} </div>
+{% endblock breadcrumbs%}
+{% block content %}
+    <form method="post">{% csrf_token %}
+        <div class="form-row">{{ form.as_p }}</div>
+        <div class="submit-row">
+         <input type="submit" value="Agregar ZipCode" />
+        </div></form>
+{% endblock content %}
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+""" Archivo openlayers-cust.html
+
+{% extends "gis/openlayers.html" %}
+{% load l10n %}
+
+{% block options %}{{ block.super }}
+options['default_lon'] = {{ default_lon|unlocalize }};
+options['default_lat'] = {{ default_lat|unlocalize }};
+options['default_zoom'] = {{ default_zoom|unlocalize }};
+{% endblock %}
+
+{% block base_layer %}
+var base_layer = new ol.layer.Tile({source: 
+                                    new ol.source.OSM()});
+{% endblock %}
+
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+
+{% block content %}
+    <form method="post">
+    {% csrf_token %}
+        <div class="form-row">
+            {{ form.as_p }}
+        </div>
+        <div class="submit-row">
+<label>&nbsp;</label>
+<input type="submit" value="Agregar ZipCode" />
+        </div>
+    </form>
+{% endblock content %}
+
+""" Fin del archivo geodjango-templates.html
+
+\end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{verbatim}
+Editar el archivo geodjango-demo/urls.py
+
+from django.conf.urls import url, include
+from django.contrib.gis import admin
+
+urlpatterns = [
+    url(r'^admin/', admin.site.urls),
+    url(r'^geolocation/', include('geolocation.urls', 
+    namespace="geolocation")),
+]
+
+Guardar y ahora se puede ejecutar el comando 
+
+(geodjango)$ python manage.py runserver
+
+Y acceder desde un navegador la dirección 
+
+http://localhost:8000/geolocation/register-poly/
+\end{verbatim}
+\end{frame}
+
+
+>>>>>>> f837b9d91ddf1c492cd58e875f097fb99eb9339c
+\begin{frame}[plain]
+
+  
+      \begin{center}
+
+        \font\endfont = cmss10 at 15.40mm
+        \color{Brown}
+        \endfont 
+        \baselineskip 20.0mm
+
+        CENDITEL
+
+      \end{center}    
+
+    
+\end{frame}
+
+
+\end{document}
+=======
+2	\usetheme{Berkeley}
+3	\usepackage[spanish]{babel}
+4	\usepackage[utf8]{inputenc}
+5	\usepackage[T1]{fontenc}
+6	\usepackage{lmodern}
+7	\usepackage{fancyhdr}
+8	\usepackage{graphicx}
+9	\usepackage{mathrsfs}
+10	\usepackage{amsmath}
+11	\usepackage{lmodern}
+12	\usepackage{multimedia}
+13	\usepackage{hyperref}
+14	\usepackage{varioref}
+15	\usepackage{ragged2e}
+16	\usepackage{etoolbox}
+17	\usepackage{lipsum}
+18	\usepackage{fancyvrb}
+19	\fvset{fontsize=\footnotesize}
+20	\RecustomVerbatimEnvironment{verbatim}{Verbatim}{}
+21	\apptocmd{\frame}{}{\justifying}{} % Allow optional arguments after frame.
+22	\usecolortheme[{rgb={0.6,0,0}}]{structure}
+23	\setbeamercovered{transparent}
+24	\setbeamertemplate{items}[ball]
+25	\setbeamertemplate{blocks}[rounded][shadow=true]
+26	\beamertemplateshadingbackground{gray!50}{white!50}
+27	\newtheorem{Ejemplo}{Django}
+28	\useoutertheme{infolines}
+29	\title []{Framework Django 1.11}
+30	\author{Instructor Ing. Erwin Paredes}
+31	%\logo{ \includegraphics[height=3cm]{figura/logo-blanco2.png}}
+32	\institute{CENDITEL}
+33	\date{\today}
+34	
+35	\begin{document}
+36	
+37	\section{Cenditel}
+38	\begin{frame}
+39	\maketitle
+40	\end{frame}
+41	
+42	\subsection{La FundaciÃ³n}
+43	\begin{frame}
+44	\begin{block}{FundaciÃ³n CENDITEL}
+45	\indent   
+46	Somos el Centro Nacional de Desarrollo e InvestigaciÃ³n en TecnologÃ­as Libres, cuyas actividades son el desarrollo de proyectos con impacto tecnolÃ³gico enmarcados en las Ã¡reas de Software, Hardware y Telecomunicaciones.
+47	https://www.cenditel.gob.ve
+48	
+49	\end{block}
+50	\end{frame}
+51	
+52	\subsection{Finalidad del Curso}
+53	\begin{frame}
+54	\begin{block}{Finalidad}
+55	     
+56	Consolidar la comunidad de desarrollo en software libre alrededor de la tecnologÃ­a, en este caso el framework de desarrollo Django del lenguaje de programaciÃ³n Python
+57	\end{block}
+58	\end{frame}
+59	
+60	\subsection{Contenido del Curso}
+61	\begin{frame}
+62	\begin{block}{Contenido del Curso}
+63	\begin{itemize}
+64	\item 
+65	IntroducciÃ³n
+66	\item 
+67	Configurar ambiente de trabajo
+68	\item 
+69	Crear proyecto
+70	\item 
+71	Crear aplicaciones y estructura del proyecto
+72	\item 
+73	Modelos y migraciones
+74	\item 
+75	Relaciones
+76	\item 
+77	Django shell y Querysets
+78	\item 
+79	Configurar URLs y primera views
+80	\item 
+81	Sistema de plantillas
+82	\item 
+83	Configurar archivos estÃ¡ticos
+84	\item 
+85	Listar Registros
+86	\item 
+87	Formularios y vista para anexar registros
+88	\item 
+89	Vistas para modificar y eliminar registros
+90	\end{itemize}
+91	\end{block}
+92	\end{frame}
+93	
+94	
+95	\begin{frame}
+96	\begin{block}{Contenido del Curso}
+97	\begin{itemize}
+98	\item
+99	ListView, CreateView, UpdateView, DeleteView   
+100	\item
+101	Crear Login
+102	\item
+103	Registro de Usuarios
+104	\item
+105	Decorador Login required
+106	\item
+107	Recuperar contraseÃ±a por correo
+108	\item
+109	IntroducciÃ³n a conceptos avanzados
+110	\end{itemize}
+111	\end{block}
+112	\end{frame}
+113	
+114	
+115	
+116	\section{Django}
+117	\subsection{IntroducciÃ³n}
+118	\begin{frame}
+119	Django: Es un entorno de trabajo para el desarrollo Web, basado en el lenguaje de programaciÃ³n Python.
+120	
+121	Un entorno de trabajo o framework, implica una estructura conceptual y conjunto de herramientas que tÃ­picamente son un conjunto de librerÃ­as, que permite organizar el desarrollo.
+122	
+123	Para el framework Django la estructura conceptual es el denominado MVC (Modelo Vista Controlador), esto es, se organiza el desarrollo en mÃ³dulos que separan el modelo de datos, la interfaz o vista y el comportamiento.
+124	
+125	Por lo que para cada aplicaciÃ³n o mÃ³dulo que conforma el proyecto se agrupa en lo siguientes archivos:
+126	
+127	\begin{itemize}
+128	 \item models.py :Contiene las clases que definen la estructura de datos
+129	 \item views.py  :Contiene la codificaciÃ³n de las funcionalidades que permiten controlar el comportamiento del sistema.
+130	 \item *.html    :Contiene la codificaciÃ³n de la interfaz
+131	\end{itemize}
+132	\end{frame}
+133	
+134	\subsection{Configurar ambiente de trabajo}
+135	\begin{frame}[fragile]
+136	
+137	\begin{Large}\textbf{Sitio Oficial}\end{Large}
+138	\begin{verbatim}
+139	
+140	https://www.djangoproject.com/
+141	
+142	InstalaciÃ³n
+143	
+144	https://docs.djangoproject.com/en/1.11/intro/install
+145	
+146	Descarga:
+147	
+148	https://www.djangoproject.com/download/
+149	\end{verbatim}
+150	\end{frame}
+151	
+152	\begin{frame}[fragile]
+153	
+154	\begin{Large}\textbf{InstalaciÃ³n}\end{Large}
+155	\begin{verbatim}
+156	// Descomprimir el archivo
+157	
+158	tar -xzvf Django1.11.tar.gz
+159	
+160	cd Django1.11
+161	
+162	python setup.py install
+163	
+164	// Comprobar la instalaciÃ³n del framework:
+165	
+166	python
+167	import django
+168	django.VERSION
+169	
+170	Ctrl + D
+171	\end{verbatim}
+172	\end{frame}
+173	
+174	\subsection{Crear proyecto}
+175	\begin{frame}[fragile]
+176	
+177	\begin{verbatim}
+178	// Crear el primer proyecto:
+179	
+180	django-admin startproject curso
+181	
+182	// este comando crea la siguiente infraestructura
+183	de carpetas y archivos:
+184	
+185	curso/
+186	    manage.py
+187	    curso/
+188	        __init__.py
+189	        settings.py
+190	        urls.py
+191	        wsgi.py
+192	
+193	
+194	Configurar la base de datos
+195	
+196	\end{verbatim}
+197	\end{frame}
+198	
+199	\begin{frame}[fragile]
+200	
+201	\begin{verbatim}
+202	// Se debe haber instalado el gestor de la Base de
+203	Datos Postgresql  y la librerÃ­a de conexiÃ³n psycopg2
+204	// Creamos la base de datos:
+205	su postgres
+206	psql
+207	CREATE USER administrador;
+208	CREATE DATABASE curso;
+209	
+210	// Se edita el archivo curso/settings.py la constante
+211	DATABASES = {
+212	   'default': {
+213	        'ENGINE': 'django.db.backends.postgresql',
+214	        'NAME': 'curso',
+215	        'USER': 'administrador',
+216	        'PASSWORD': 'clave',
+217	        'HOST': '127.0.0.1',
+218	        'PORT': '5432',
+219	  } }
+220	\end{verbatim}
+221	\end{frame}
+222	
+223	\begin{frame}[fragile]
+224	\begin{verbatim}
+225	// Se guarda y ejecuta el siguiente comando para
+226	crear las tablas iniciales del proyecto:
+227	
+228	python manage.py migrate
+229	
+230	// Se ejcuta el comando para crear el superusuario o
+231	usuario administrador del proyecto:
+232	
+233	python manage.py createsuperuser
+234	
+235	// Se introducen los datos que solicita
+236	// Se ejecuta el siguiente comando para activar el
+237	servidor de prueba de forma local
+238	
+239	python manage.py runserver
+240	\end{verbatim}
+241	\end{frame}
+242	
+243	\begin{frame}[fragile]
+244	\begin{verbatim}
+245	python manage.py runserver
+246	
+247	// Arroja el siguiente mensaje
+248	Performing system checks...
+249	
+250	System check identified no issues (0 silenced).
+251	
+252	July 26, 2017 - 15:32:30
+253	Django version 1.11.3,using settings 'curso.settings'
+254	Starting development server at http://127.0.0.1:8000/
+255	Quit the server with CONTROL-C.
+256	
+257	// Abrimos el navegador de preferencia y colocamos la
+258	siguiente direcciÃ³n para acceder al sistema
+259	administrativo del proyecto:
+260	
+261	http://localhost:8000/admin
+262	\end{verbatim}
+263	\end{frame}
+264	
+265	\subsection{Crear aplicaciones}
+266	\begin{frame}[fragile]
+267	\begin{verbatim}
+268	
+269	http://localhost:8000/admin
+270	
+271	// En el debemos autenticarnos con el usuario y
+272	password del superusuario creado en los pasos
+273	anteriores
+274	
+275	// AllÃ­ podemos gestionar los usuarios del sistema
+276	asÃ­ como los grupos que evenctualmente se utilizan
+277	para asignar permisos de acceso.
+278	
+279	// En el terminal presionar las teclas Ctrl + C para
+280	interrumpir la ejecuciÃ³n del servidor y asÃ­ crear
+281	las aplicaciones del proyecto.
+282	
+283	python manage.py startapp encuesta
+284	
+285	\end{verbatim}
+286	\end{frame}
+287	
+288	\subsection{Modelos}
+289	\begin{frame}[fragile]
+290	\begin{verbatim}
+291	python manage.py startapp encuesta
+292	
+293	// Se edita el archivo encuesta/models.py
+294	
+295	from django.db import models
+296	
+297	class Question(models.Model):
+298	    question_text = models.CharField(max_length=200)
+299	    pub_date =models.DateTimeField('date published')
+300	
+301	class Choice(models.Model):
+302	    question = models.ForeignKey(Question,
+303	               on_delete=models.CASCADE)
+304	    choice_text = models.CharField(max_length=200)
+305	    votes = models.IntegerField(default=0)
+306	
+307	\end{verbatim}
+308	\end{frame}
+309	
+310	\begin{frame}[fragile]
+311	\begin{verbatim}
+312	// Almacenamos y editamos el archivo
+313	curso/settings.py la constante:
+314	
+315	INSTALLED_APPS = [
+316	    ...
+317	    'django.contrib.staticfiles',
+318	    'encuesta',
+319	]
+320	
+321	// Para crear las tablas correspondiente de models.py
+322	se ejecuta el comando:
+323	
+324	python manage.py makemigrations encuesta
+325	
+326	python manage.py migrate encuesta
+327	
+328	\end{verbatim}
+329	\end{frame}
+330	
+331	\subsection{Relaciones}
+332	\begin{frame}[fragile]
+333	\begin{verbatim}
+334	// Para el manejo de las tablas por medio del
+335	framework se puede realizar desde el terminal
+336	con el comando:
+337	
+338	python manage.py shell
+339	
+340	
+341	\end{verbatim}
+342	\end{frame}
+343	
+344	\subsection{Django shell y Querysets}
+345	\begin{frame}[fragile]
+346	\begin{verbatim}
+347	
+348	// AllÃ­ podemos ejecutar las siguientes instrucciones
+349	
+350	from encuesta.models import Question, Choice
+351	from django.utils import timezone
+352	
+353	Question.objects.all()
+354	q = Question(question_text="Que hay de nuevo?",
+355	                     pub_date=timezone.now())
+356	q.save()
+357	q.id
+358	q.question_text
+359	q.pub_date
+360	q.question_text = "Q ai d nuevo?"
+361	q.save()
+362	
+363	Ctril + D para salir
+364	\end{verbatim}
+365	\end{frame}
+366	
+367	\begin{frame}[fragile]
+368	\begin{verbatim}
+369	Editamos nuevamente el archivo encuesta/models.py
+370	para aÃ±adir el sigueinte metodo a la clase Question
+371	
+372	import datetime
+373	
+374	from django.db import models
+375	from django.utils import timezone
+376	
+377	class Question(models.Model):
+378	    # ...
+379	    def was_published_recently(self):
+380	        return self.pub_date >= timezone.now() -
+381	                      datetime.timedelta(days=1)
+382	
+383	Guardamos y volvemos a terminal:
+384	
+385	python manage.py shell
+386	
+387	\end{verbatim}
+388	\end{frame}
+389	
+390	\begin{frame}[fragile]
+391	\begin{verbatim}
+392	from polls.models import Question, Choice
+393	
+394	Question.objects.all()
+395	q = Question.objects.get(pk=1)
+396	q.was_published_recently()
+397	
+398	q = Question.objects.filter(id=1)
+399	
+400	q = Question.objects.filter(
+401	          question_text__startswith='Q')
+402	
+403	from django.utils import timezone
+404	current_year = timezone.now().year
+405	Question.objects.get(pub_date__year=current_year)
+406	
+407	Question.objects.get(id=2) Error...
+408	\end{verbatim}
+409	\end{frame}
+410	
+411	\begin{frame}[fragile]
+412	\begin{verbatim}
+413	q = Question.objects.get(pk=1)
+414	q.choice_set.all()
+415	q.choice_set.create(choice_text='No mucho', votes=0)
+416	q.choice_set.create(choice_text='Muchas cosas'
+417	                                           ,votes=0)
+418	c = q.choice_set.create(choice_text='De todo un poco'
+419	                                           ,votes=0)
+420	
+421	c.question
+422	
+423	q.choice_set.all()
+424	q.choice_set.count()
+425	
+426	Crtl + D para salir
+427	
+428	\end{verbatim}
+429	\end{frame}
+430	
+431	\begin{frame}[fragile]
+432	\begin{verbatim}
+433	Incluir el modelo de la aplicaciÃ³n encuesta
+434	en el sistema admin:
+435	
+436	Editamos el archivo encuesta/admin.py
+437	from django.contrib import admin
+438	
+439	from .models import Question
+440	
+441	admin.site.register(Question)
+442	
+443	Guardamos y ejecutamos el servidor
+444	de prueba nuevamente:
+445	
+446	python manage.py runserver
+447	
+448	en el navegador http://localhost:8000/admin
+449	
+450	\end{verbatim}
+451	\end{frame}
+452	
+453	\subsection{Configurar URLs y primera views}
+454	\begin{frame}[fragile]
+455	\begin{verbatim}
+456	Crear la primera vista para acceso del proyecto
+457	Editamos el archivo encuesta/urls.py
+458	
+459	from django.conf.urls import url
+460	from . import views
+461	urlpatterns = [
+462	    # ex: /encueta/
+463	    url(r'^$', views.index, name='index'),
+464	    # ex: /encuesta/5/
+465	    url(r'^(?P<question_id>[0-9]+)/$',
+466	    views.detail, name='detail'),
+467	    # ex: /encuesta/5/results/
+468	    url(r'^(?P<question_id>[0-9]+)/results/$',
+469	    views.results, name='results'),
+470	    # ex: /encuesta/5/vote/
+471	    url(r'^(?P<question_id>[0-9]+)/vote/$',
+472	     views.vote, name='vote'),
+473	]
+474	\end{verbatim}
+475	\end{frame}
+476	
+477	\begin{frame}[fragile]
+478	\begin{verbatim}
+479	Editamos el archivo encuesta/views.py:
+480	
+481	from django.http import HttpResponse
+482	from .models import Question
+483	
+484	def index(request):
+485	    question_list = Question.objects.order_by('-pub_date')[:5]
+486	    output = ', '.join([q.question_text for q in question_list])
+487	    return HttpResponse(output)
+488	
+489	def detail(request, question_id):
+490	    return HttpResponse("Question No: %s." % question_id)
+491	
+492	def results(request, question_id):
+493	    response = "Results of question %s."
+494	    return HttpResponse(response % question_id)
+495	
+496	def vote(request, question_id):
+497	    return HttpResponse("Voting on question %s." % question_id)
+498	\end{verbatim}
+499	\end{frame}
+500	
+501	\begin{frame}[fragile]
+502	\begin{verbatim}
+503	Guardamos y ejecutamos el servidor de prueba y
+504	probamos los enlaces desde el navegador:
+505	
+506	python manage.py runserver
+507	
+508	En el navegador probamos los siguientes enlaces:
+509	
+510	http://localhost:8000/encueta
+511	http://localhost:8000/encueta/1
+512	http://localhost:8000/encueta/1/result
+513	http://localhost:8000/encueta/1/vote
+514	
+515	\end{verbatim}
+516	\end{frame}
+517	
+518	\subsection{Sistema de plantillas}
+519	
+520	\begin{frame}[fragile]
+521	\begin{verbatim}
+522	Uso del plantillas:
+523	
+524	Creamos la siguiente estructura
+525	
+526	cd encuesta
+527	mkdir templates
+528	mkdir templates/encuesta
+529	
+530	y editamos el archivo index.html allÃ­
+531	
+532	gedit encuesta/templates/encuesta/index.html
+533	
+534	\end{verbatim}
+535	\end{frame}
+536	
+537	\begin{frame}[fragile]
+538	\begin{verbatim}
+539	{% if question_list %}
+540	    <ul>
+541	    {% for question in question_list %}
+542	        <li>
+543	         <a href="/encuesta/{{ question.id }}/">
+544	          {{
+545	            question.question_text
+546	          }}
+547	         </a>
+548	        </li>
+549	    {% endfor %}
+550	    </ul>
+551	{% else %}
+552	    <p>No hay encuestas.</p>
+553	{% endif %}
+554	\end{verbatim}
+555	\end{frame}
+556	
+557	\begin{frame}[fragile]
+558	\begin{verbatim}
+559	Guardamos y modificamos el archivo encuesta views.py
+560	para que utilice la plantilla
+561	
+562	from django.http import HttpResponse
+563	from django.template import loader
+564	
+565	from .models import Question
+566	
+567	
+568	def index(request):
+569	    question_list = Question.objects.order_by('-pub_date')[:5]
+570	    template = loader.get_template('polls/index.html')
+571	    context = {
+572	        'question_list': question_list,
+573	    }
+574	    return HttpResponse(template.render(context, request))
+575	
+576	\end{verbatim}
+577	\end{frame}
+578	
+579	\begin{frame}[fragile]
+580	\begin{verbatim}
+581	o utilizando la shortcuts render
+582	
+583	from django.shortcuts import render
+584	
+585	from .models import Question
+586	
+587	
+588	def index(request):
+589	    question_list = Question.objects.order_by('-pub_date')[:5]
+590	    context = {'question_list': question_list}
+591	    return render(request, 'polls/index.html', context)
+592	
+593	
+594	\end{verbatim}
+595	\end{frame}
+596	
+597	\subsection{Configurar estÃ¡ticos}
+598	\begin{frame}[fragile]
+599	\begin{verbatim}
+600	Descargar plantillas prediseÃ±adas, por ejemplo:
+601	
+602	https://adminlte.io/
+603	
+604	Copiar los directorios ccs y js en los en la carpeta static
+605	
+606	Copiar los archivo *.html en la carpeta templates
+607	
+608	Editar index.html y cambiar los enlaces a cada archivo en:
+609	
+610	<link rel="stylesheet"
+611	href="{% static 'css/DataTables/jquery.dataTables.min.css' %}">
+612	
+613	\end{verbatim}
+614	\end{frame}
+615	
+616	\subsection{Listar Registros}
+617	\begin{frame}[fragile]
+618	\begin{verbatim}
+619	Creamos el archivo ajax.py
+620	
+621	# -*- encoding: utf-8 -*-
+622	from django.conf import settings
+623	from django_datatables_view.base_datatable_view import (
+624	   BaseDatatableView)
+625	   
+626	from django.contrib.auth.models import (
+627	    User)
+628	
+629	class ListUsersAjaxView(BaseDatatableView):
+630	    model = User
+631	    columns = ['pk','first_name','last_name','username','email',
+632	               'date_joined', 'last_joined' ]
+633	    order_columns = ['pk', 'username']
+634	    max_display_length = 500
+635	   
+636	    def __init__(self):
+637	        super(ListUsersAjaxView, self).__init__()
+638	
+639	    def get_initial_queryset(self):
+640	        return self.model.objects.all()
+641	\end{verbatim}
+642	\end{frame}
+643	
+644	\begin{frame}[fragile]
+645	\begin{verbatim}
+646	def prepare_results(self, qs):
+647	  json_data = []
+648	  for item in qs:
+649	    json_data.append([
+650	      username,
+651	     "{0} {1}".format(str(item.first_name),str(item.last_name)),
+652	      item.email,
+653	      item.date_joined.strftime("%Y-%m-%d %H:%M:%S"),
+654	      last_login               
+655	    ])
+656	           
+657	  return json_data
+658	# Fin del archivo ajax.py
+659	
+660	#En el archivo urls.py anexar las siguientes lineas
+661	from .ajax import *
+662	
+663	urlpatterns = [
+664	    ....
+665	url(r'^listar-users/$', ListUsersAjaxView.as_view(),
+666	        name="listar_users"),
+667	\end{verbatim}
+668	\end{frame}
+669	
+670	\begin{frame}[fragile]
+671	\begin{verbatim}
+672	Se anexa el siguiente cÃ³digo el archivo index.html
+673	En la parte visual:
+674	
+675	<div id="datatable"></div>
+676	
+677	Y en la parte de cÃ³digo javascript
+678	
+679	<script type="text/javascript">
+680	$(document).ready(function() {
+681	   $('#datatable').dataTable({
+682	        "processing": true,
+683	        "serverSide": true,
+684	        "ajax": {% url 'listar_user'%},
+685	        language: {url: JSON_DATA}
+686	        });
+687	    $('#datatable')
+688	        .removeClass('display')
+689	        .addClass('table table-striped table-bordered');
+690	});
+691	</script>
+692	\end{verbatim}
+693	\end{frame}
+694	
+695	\subsection{Anexar registros}
+696	\begin{frame}[fragile]
+697	\begin{verbatim}
+698	Creamos el mÃ©todo en el archivo views.py
+699	
+700	def AnexarRegistro(request):
+701	    if request.method == 'POST':
+702	       
+703	        vusername = request.POST['username']
+704	        u = User(username = vusername)
+705	        u.save()
+706	        message = _("El usuario fue creado")
+707	        template = loader.get_template('personal/profile.html')
+708	    context = {'message':message}
+709	    return HttpResponse(template.render(context, request))
+710	       
+711	\end{verbatim}
+712	\end{frame}
+713	
+714	\subsection{Modificar y eliminar registros}
+715	\begin{frame}[fragile]
+716	\begin{verbatim}
+717	@login_required
+718	def change_profile(request):
+719	    """ Cambiar perfil de usuario
+720	    """
+721	    if request.method == 'POST':
+722	        user_id = request.POST['user_id']
+723	        personal = User.objects.get(user_id=request.user.id)               
+724	        personal.first_name = request.POST['fname']
+725	        personal.last_name = request.POST['lname']
+726	        personal.email = request.POST['email']
+727	        personal.is_active = request.POST.get('is_active')
+728	        personal.user.save()
+729	       
+730	        message = _("The profile change was made")
+731	        context = {'personal':personal,'message':message,}
+732	    template = loader.get_template('personal/profile.html')
+733	    return HttpResponse(template.render(context, request))
+734	
+735	\end{verbatim}
+736	\end{frame}
+737	
+738	\begin{frame}[fragile]
+739	\begin{verbatim}
+740	@login_required
+741	def delete_personal(request):
+742	    """ Delete users
+743	    """
+744	    id = json.loads(request.POST['seleccionados'])
+745	    print id
+746	 
+747	    for id_values in id:
+748	        if id_values["id"] != "0":
+749	                   
+750	            u = User.objects.get(pk=int(id_values["id"]))
+751	            u.delete()   
+752	           
+753	    return redirect('personal')
+754	\end{verbatim}
+755	\end{frame}
+756	
+757	\subsection{View's}
+758	\begin{frame}[fragile]
+759	\begin{verbatim}
+760	####  ListView
+761	
+762	# En el archivo views.py
+763	
+764	from django.views.generic.list import ListView
+765	from django.utils import timezone
+766	
+767	from articles.models import Article
+768	
+769	class ArticleListView(ListView):
+770	
+771	    model = Article
+772	
+773	    def get_context_data(self, **kwargs):
+774	        context = super(ArticleListView,
+775	                        self).get_context_data(**kwargs)
+776	        context['now'] = timezone.now()
+777	        return context
+778	
+779	\end{verbatim}
+780	\end{frame}
+781	
+782	\begin{frame}[fragile]
+783	\begin{verbatim}
+784	
+785	# En el archivo urls.py
+786	from django.conf.urls import url
+787	
+788	from article.views import ArticleListView
+789	
+790	urlpatterns = [
+791	 url(r'^$',ArticleListView.as_view(),name='article-list'),
+792	]
+793	
+794	# El template
+795	<h1>Articles</h1>
+796	<ul>
+797	{% for article in object_list %}
+798	    <li>
+799	    {{ article.pub_date|date }} - {{ article.headline }}
+800	    </li>
+801	{% empty %}
+802	    <li>No articles yet.</li>
+803	{% endfor %}
+804	</ul>
+805	\end{verbatim}
+806	\end{frame}
+807	
+808	\begin{frame}[fragile]
+809	\begin{verbatim}
+810	#### DetailView
+811	
+812	# En el archivo views.py
+813	
+814	from django.views.generic.detail import DetailView
+815	from django.utils import timezone
+816	
+817	from articles.models import Article
+818	
+819	class ArticleDetailView(DetailView):
+820	
+821	    model = Article
+822	
+823	    def get_context_data(self, **kwargs):
+824	        context = super(ArticleDetailView, self).
+825	                  get_context_data(**kwargs)
+826	        context['now'] = timezone.now()
+827	        return context
+828	       
+829	\end{verbatim}
+830	\end{frame}
+831	
+832	\begin{frame}[fragile]
+833	\begin{verbatim}
+834	
+835	# En el archivo urls.py
+836	
+837	from django.conf.urls import url
+838	
+839	from article.views import ArticleDetailView
+840	
+841	urlpatterns = [
+842	 url(r'^(?P<slug>[-\w]+)/$',ArticleDetailView.as_view(),
+843	                            name='article-detail'),
+844	]
+845	
+846	# El template
+847	
+848	<h1>{{ object.headline }}</h1>
+849	<p>{{ object.content }}</p>
+850	<p>Reporter: {{ object.reporter }}</p>
+851	<p>Published: {{ object.pub_date|date }}</p>
+852	<p>Date: {{ now|date }}</p>
+853	\end{verbatim}
+854	\end{frame}
+855	
+856	\begin{frame}[fragile]
+857	\begin{verbatim}
+858	#### CreateView
+859	
+860	from django.views.generic.edit import CreateView
+861	from myapp.models import Author
+862	
+863	class AuthorCreate(CreateView):
+864	    model = Author
+865	    fields = ['name']
+866	
+867	# En el template
+868	
+869	<form action="" method="post">{% csrf_token %}
+870	    {{ form.as_p }}
+871	    <input type="submit" value="Save" />
+872	</form>
+873	
+874	\end{verbatim}
+875	\end{frame}
+876	
+877	\begin{frame}[fragile]
+878	\begin{verbatim}
+879	#### UpdateView
+880	
+881	from django.views.generic.edit import UpdateView
+882	from myapp.models import Author
+883	
+884	class AuthorUpdate(UpdateView):
+885	    model = Author
+886	    fields = ['name']
+887	    template_name_suffix = '_update_form'
+888	   
+889	# En el template
+890	
+891	<form action="" method="post">{% csrf_token %}
+892	    {{ form.as_p }}
+893	    <input type="submit" value="Update" />
+894	</form>
+895	
+896	\end{verbatim}
+897	\end{frame}
+898	
+899	\begin{frame}[fragile]
+900	\begin{verbatim}
+901	#### DeleteView
+902	
+903	from django.views.generic.edit import DeleteView
+904	from django.urls import reverse_lazy
+905	from myapp.models import Author
+906	
+907	class AuthorDelete(DeleteView):
+908	    model = Author
+909	    success_url = reverse_lazy('author-list')
+910	   
+911	# En el template
+912	
+913	<form action="" method="post">{% csrf_token %}
+914	    <p>Are you sure you want to delete "{{ object }}"?</p>
+915	    <input type="submit" value="Confirm" />
+916	</form>
+917	
+918	\end{verbatim}
+919	\end{frame}
+920	
+921	\subsection{Crear Login}
+922	\begin{frame}[fragile]
+923	\begin{verbatim}
+924	Creamos la aplicacion user desde la consola:
+925	
+926	python manage.py startapp user
+927	
+928	Editamos el archivo user/views.py:
+929	
+930	# -*- coding: utf-8 -*-
+931	
+932	from django.shortcuts import render
+933	from django.contrib import messages
+934	from django.contrib.auth import (
+935	    authenticate, logout, login
+936	)
+937	from django.contrib.auth.models import (
+938	    Group, Permission, User
+939	)
+940	
+941	class LoginView(FormView):
+942	    form_class = FormularioLogin
+943	    template_name = 'users.login.html'
+944	    success_url = '/inicio/'
+945	\end{verbatim}
+946	\end{frame}
+947	
+948	\begin{frame}[fragile]
+949	\begin{verbatim}
+950	def form_valid(self, form):
+951	       
+952	    usuario = form.cleaned_data['usuario']
+953	    contrasena = form.cleaned_data['contrasena']
+954	    usuario = authenticate(username=usuario,password=contrasena)
+955	       
+956	    if usuario is not None:
+957	        login(self.request, usuario)
+958	        messages.info(self.request,'Bienvenido %s has ingresado\
+959	                                    Sistema con el usuario %s \
+960	                                    ' % (usuario.first_name,
+961	                                         usuario.username))
+962	    else:
+963	        self.success_url = reverse_lazy('users:login')
+964	        messages.warning(self.request,'Verifique su nombre y \
+965	                                       contraseÃ±a\
+966	                                      y vuelve a intertar')
+967	
+968	    return super(LoginView, self).form_valid(form)
+969	 
+970	\end{verbatim}
+971	\end{frame}
+972	
+973	\subsection{Registro de Usuarios}
+974	\begin{frame}[fragile]
+975	\begin{verbatim}
+976	#### Crear Permisos desde el shell ejecutar
+977	
+978	from myapp.models import BlogPost
+979	from django.contrib.auth.models import Permission
+980	from django.contrib.contenttypes.models import ContentType
+981	
+982	content_type = ContentType.objects.get_for_model(BlogPost)
+983	permission = Permission.objects.create(
+984	    codename='can_publish',
+985	    name='Can Publish Posts',
+986	    content_type=content_type,
+987	)
+988	
+989	\end{verbatim}
+990	\end{frame}
+991	
+992	\begin{frame}[fragile]
+993	\begin{verbatim}
+994	
+995	from django.contrib.auth.models import Permission, User
+996	from django.contrib.contenttypes.models import ContentType
+997	from django.shortcuts import get_object_or_404
+998	
+999	from myapp.models import BlogPost
+1000	
+1001	def user_gains_perms(request, user_id):
+1002	    user = get_object_or_404(User, pk=user_id)
+1003	    # any permission check will
+1004	    #cache the current set of permissions
+1005	    user.has_perm('myapp.change_blogpost')
+1006	
+1007	    content_type=ContentType.objects.get_for_model(BlogPost)
+1008	    permission = Permission.objects.get(
+1009	        codename='change_blogpost',
+1010	        content_type=content_type,
+1011	    )
+1012	    user.user_permissions.add(permission)
+1013	
+1014	\end{verbatim}
+1015	\end{frame}
+1016	
+1017	\subsection{Login required}
+1018	\begin{frame}[fragile]
+1019	\begin{verbatim}
+1020	
+1021	from django.contrib.auth.decorators import
+1022	  login_required, permission_required
+1023	from django.views.generic import TemplateView
+1024	
+1025	from .views import VoteView
+1026	
+1027	urlpatterns = [
+1028	    url(r'^about/$', login_required(
+1029	           TemplateView.as_view(template_name="secret.html"))),
+1030	    url(r'^vote/$', permission_required(
+1031	           'polls.can_vote')(VoteView.as_view())),
+1032	]
+1033	
+1034	\end{verbatim}
+1035	\end{frame}
+1036	
+1037	\subsection{Recuperar contraseÃ±a por correo}
+1038	\begin{frame}[fragile]
+1039	\begin{verbatim}
+1040	def newpassword(request):
+1041	    puser = request.POST['puser']
+1042	    try:
+1043	        user = User.objects.get(username=puser)
+1044	        randompass = ''.join([choice(
+1045	        '1234567890qwertyuiopasdfghjklzxcvbnm')
+1046	        for i in range(10)])
+1047	        print randompass
+1048	        subject = _('System: New Password')
+1049	        message = _('Your password is reset, new password: ')
+1050	                    + randompass
+1051	        user.email_user("subject","message")
+1052	        user.set_password(randompass)
+1053	        user.save()
+1054	    except:
+1055	        print "error send mail"
+1056	        mensaje = _("User not found")
+1057	    return redirect('/authenticate/signin')
+1058	 
+1059	\end{verbatim}
+1060	\end{frame}
+1061	
+1062	\subsection{Conceptos avanzados}
+1063	\begin{frame}[fragile]
+1064	\begin{verbatim}
+1065	Otros conceptos
+1066	
+1067	* InternacionalizaciÃ³n
+1068	* Zonas Horarias
+1069	* Servidor Web
+1070	* Geodjango
+1071	* Django Rest
+1072	
+1073	 Entre otros...
+1074	
+1075	\end{verbatim}
+1076	\end{frame}
+1077	
+1078	\begin{frame}[plain]
+1079	
+1080	 
+1081	      \begin{center}
+1082	
+1083	        \font\endfont = cmss10 at 15.40mm
+1084	        \color{Brown}
+1085	        \endfont 
+1086	        \baselineskip 20.0mm
+1087	
+1088	        CENDITEL
+1089	
+1090	      \end{center}   
+1091	
+1092	   
+1093	\end{frame}
+1094	
+1095	
+1096	\end{document}
+>>>>>>> 392f76c82d86075e983cee03fa4b240023981610

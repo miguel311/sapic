@@ -1,0 +1,80 @@
+{% extends 'users.other.options.html' %}
+{% block titulo %}_-=SAPIC-Actualizar Mis datos Basicos=-_{% endblock titulo %}
+{% block contenido_principal %}
+<div class="panel-sapic">
+  <!-- Inicio Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active" id="cuentas">
+        <a href="#cuenta" aria-controls="cuenta" role="tab" data-toggle="tab">Cuenta de Usuario</a>
+      </li>
+      <li role="presentation" id="perfiles">
+        <a href="#perfil" aria-controls="perfil" role="tab" data-toggle="tab">Perfil de Usuario</a>
+      </li>
+    </ul>
+    <!-- Fin Nav tabs -->
+    <!-- Inicio Tab panes -->
+    {% if 'Administradores' in request.session.grupos %}
+    
+      <form id="form_perfil" action="{% url 'users:update_perfil_admin' upUser.fk_user.pk %}" method="post">
+    {% else %}
+      <form id="form_perfil" action="{% url 'users:update_perfil' upUser.fk_user.pk %}" method="post">
+    {% endif %}
+    <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="cuenta">
+        <h3>Actualizar la cuenta de usuario </h3>
+        {% csrf_token %}
+        <div class="form-group has-feedback">
+          {{ forms.user.email.label }}
+        </div>
+      <div class="form-group has-feedback">
+        {{ forms.user.email }}
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+      </div>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="perfil">
+        <h3>Actualizar el Perfil del Usuario</h3>
+          <div class="form-group has-feedback">
+            {{ forms.user.first_name.label }}
+          </div>
+          <div class="form-group has-feedback">
+            {{ forms.user.first_name }}
+            <span class="glyphicon glyphicon-user form-control-feedback"></span>
+          </div>
+          <div class="form-group has-feedback">
+            {{ forms.user.last_name.label }}
+          </div>
+          <div class="form-group has-feedback">
+            {{ forms.user.last_name }}
+            <span class="glyphicon glyphicon-user form-control-feedback"></span>
+          </div>
+          <div class="form-group has-feedback col-md-1">
+              {{ forms.user_perfil.fk_tipo_documento.label }}
+          </div>
+          <div class="form-group has-feedback col-md-4">
+            {{ forms.user_perfil.fk_tipo_documento }}
+          </div>
+          {% if "Administradores" in request.session.grupos %}
+            <div class="col-md-1 form-group has-feedback">
+                {{ forms.user_perfil.id_perfil.label }}
+            </div>
+            <div class="col-md-5 form-group has-feedback">
+              {{ forms.user_perfil.id_perfil }}
+            </div>
+          {% else %}
+            <div class="col-md-2 form-group has-feedback">
+                {{ forms.user_perfil.documento.label }}
+            </div>
+            <div class="col-md-5 form-group has-feedback">
+              {{ forms.user_perfil.documento }}
+            </div>
+          {% endif %}
+      </div>
+    <div class="modal-footer">
+    <input type="submit" value="Actualizar Perfil" class="btn btn-danger"/>
+    </form>
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+  </div>
+  </div>
+</div>
+{% endblock contenido_principal %}
+

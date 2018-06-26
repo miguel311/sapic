@@ -1,0 +1,142 @@
+{% extends "base.inicio.html" %}
+{% block titulo %}_-=SAPIC-Registrarse=-_{% endblock titulo %}
+{% block extracss %}
+{% load staticfiles %}
+<link type="text/css" rel="stylesheet" href="{% static 'jquery-entropizer-master/dist/css/jquery-entropizer.min.css' %}" />
+<link href="{% static 'bootstrap-3/css/bootstrap-toggle.min.css'%}" rel="stylesheet">
+{% endblock extracss %}
+{% block extrajs %}
+<script src="{% static 'bootstrap-3/js/bootstrap-toggle.min.js'%}"></script>
+<script type="text/javascript" src="{% static 'jquery-entropizer-master/lib/entropizer.js' %}"></script>
+<script type="text/javascript" src="{% static 'jquery-entropizer-master/dist/js/jquery-entropizer.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'users/user_register.js' %}"></script>
+{% endblock extrajs %}
+{% block contenido %}
+<div class="contenido-sapic">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="panel-sapic">
+        <!-- Inicio Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+          <li role="presentation" class="active" id="cuentas">
+            <a href="#cuenta" aria-controls="cuenta" role="tab" data-toggle="tab">Cuenta de Usuario</a>
+          </li>
+          <li role="presentation" id="perfiles">
+            <a href="#perfil" aria-controls="perfil" role="tab" data-toggle="tab">Perfil de Usuario</a>
+          </li>
+        </ul>
+        <!-- Fin Nav tabs -->
+        <form id="form_register" method="post">
+          {% csrf_token %}
+        <!-- Inicio Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane active" id="cuenta">
+            <h3>Registrar la cuenta de usuario</h3>
+                <div class="form-group has-feedback">
+                  {{ forms.user.email.label }}
+                </div>
+                <div class="form-group has-feedback">
+                  {{ forms.user.email }}
+                  <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                  {{ forms.user.username.label }}
+                </div>
+                <div class="form-group has-feedback">
+                  {{ forms.user.username }}
+                  <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                </div>
+                <div class="panel panel-default">
+                  <div class="panel-body">
+                <div class="form-group has-feedback">
+                  {{ forms.user.password1.label }}
+                </div>
+                <div class="form-group has-feedback">
+                  {{ forms.user.password1 }}
+                  <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                  {{ forms.user.password2.label }}
+                </div>
+                <div class="form-group has-feedback">
+                  {{ forms.user.password2 }}
+                  <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
+                </div>
+                <div class="row">
+                  <div class="col-xs-4">
+                    <label> Fortaleza de la contraseña</label>
+                  </div>
+                  <div id="meter" class="col-md-8 col-md-offset-2">
+                    
+                  </div>
+                </div>    
+                  </div>
+                </div>
+                
+                {% if 'Administradores' in request.session.grupos %}
+                  <p></p>
+                  <div class="row">
+                    <div class="col-xs-8">
+                      
+                          {{ forms.user.is_staff.label}}
+                          {{ forms.user.is_staff}}
+                        
+                    </div>
+                    <div class="col-xs-4">
+                          {{ forms.user.is_active.label}}
+                          {{ forms.user.is_active}}
+                    </div>
+                  </div>
+                  <div class="form-group has-feedback">
+                    <label>
+                          Grupos de Usuario
+                    </label>
+                    {{ forms.user.groups }}
+                  </div>
+              {% endif %}
+          </div>
+          <div role="tabpanel" class="tab-pane" id="perfil">
+            <h3>Registrar el Perfil del Usuario</h3>
+            <div class="form-group has-feedback">
+              {{ forms.user.first_name.label }}
+            </div>
+            <div class="form-group has-feedback">
+              {{ forms.user.first_name }}
+              <span class="glyphicon glyphicon-user form-control-feedback"></span>
+            </div>
+            <div class="form-group has-feedback">
+              {{ forms.user.last_name.label }}
+            </div>
+            <div class="form-group has-feedback">
+              {{ forms.user.last_name }}
+              <span class="glyphicon glyphicon-user form-control-feedback"></span>
+            </div>
+            <div class="form-group has-feedback">
+              {{ forms.user_perfil.fk_tipo_documento.label }}
+            </div>
+            <div class="form-group has-feedback">
+              {{ forms.user_perfil.fk_tipo_documento }}
+              <span class="glyphicon glyphicon-list form-control-feedback"></span>
+            </div>
+            <div class="form-group has-feedback">
+              {{ forms.user_perfil.id_perfil.label }}
+            </div>
+            <div class="form-group has-feedback">
+              {{ forms.user_perfil.id_perfil }}
+              <span class="glyphicon glyphicon-list form-control-feedback"></span>
+            </div>
+            <br>
+            <button id="submit" type="submit" class="btn btn-danger btn-block btn-flat">Registrar</button>
+          </div>
+          <br>
+        <!-- Fin Tab panel -->
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock contenido %}
+
+
+

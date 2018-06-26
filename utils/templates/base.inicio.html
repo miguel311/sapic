@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% block titulo %}_-=SAPIC-Inicio=-_{% endblock titulo %}
+  <!-- Tell the browser to be responsive to screen width -->
+  {% block extra_constantes %}
+  <script type="text/javascript">
+      
+  </script>
+  {% endblock extra_constantes %}
+  {% block extracss %}
+  {% load staticfiles %}
+  {% endblock extracss %}
+  {% block extrajs %}
+  {% endblock extrajs %}
+  {% block menu %}
+    <div id="menu-msn">
+      {% include 'users.menu.html' %}
+      {% block extramessagesFormsErrors %}
+        
+      {% endblock extramessagesFormsErrors %}
+    </div>
+  {% endblock menu %}
+{% block contenido %}
+{% block modals %}
+      <!-- Modal  -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Actualizar Perfil del Usuario</h4>
+                </div>
+                <div class="modal-body" id="modal-body">
+                </div>
+              </div>
+            </div>
+      </div>
+    <!-- End Modal -->
+{% endblock modals %}
+<div class="contenido-sapic">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="panel-sapic">
+                <h2 class="text-center">Sistema Integral de Planificación Estratégica Situacional</h2>
+                <br>
+            <div class="col-md-10 col-md-offset-2">
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="{% url 'explicacion:explicacion_situacional'%}">
+                        <img class="img-responsive center-block" src="{% static 'media/iconos/explicacion_situacional.png' %}" />
+                        </a>
+                        <p class="text-center">Explicacion Situacion de la comunidad</p>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#">
+                        <img  class="center-block" src="{% static 'media/iconos/estudio_problemas.png' %}" width="114px" height="82px" />
+                        </a>
+                        <p class="text-center">Estudio de problemas de la comunidad</p>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="#">
+                        <img  class="center-block" src="{% static 'media/iconos/plan_desarrollo.png' %}" width="114px" height="82px"/>
+                        </a>
+                        <p class="text-center">Plan de Desarrollo Integral de la Comunidad</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                      {% if 'Administradores' in request.session.grupos %}
+                        <a href="{% url 'users:data_detail_admin' request.user.pk %}">
+                      {% else %}
+                        <a href="{% url 'users:data_detail' request.user.pk %}">
+                      {% endif %}
+                        <img class="center-block" src="{% static 'media/iconos/mi_usuario.png' %}"  width="114px" height="82px"/>
+                        </a>
+                        <p class="text-center">Informacion Sobre mi Usuario</p>
+                    </div>
+                    <div class="col-md-3">
+                        <a href="{% url 'organizaciones:listar_organizacion' %}">
+                        <img  class="center-block" src="{% static 'media/iconos/info_voceros.png' %}" width="114px" height="82px"/>
+                        </a>
+                        <p class="text-center">Informacion Sobre Voceros y Organizaciones Comunales</p> 
+                    </div>
+                    <div class="col-md-3">
+                        <a href="">
+                        <img class="center-block" src="{% static 'media/iconos/opciones.png' %}" width="114px" height="82px"/>
+                        </a>
+                        <p class="text-center">Otras Opciones Disponibles</p> 
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock contenido %}

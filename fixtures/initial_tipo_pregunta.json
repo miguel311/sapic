@@ -1,0 +1,38 @@
+[
+    {
+        "fields": {
+            "tipo": "Selección Simple"
+        },
+        "model": "explicacion_situacional.TipoPregunta"
+    },
+    {
+        "fields": {
+            "tipo": "Selección Múltiple"
+        },
+        "model": "explicacion_situacional.TipoPregunta"
+    },
+    {
+        "fields": {
+            "tipo": "Si/No"
+        },
+        "model": "explicacion_situacional.TipoPregunta"
+    },
+    {
+        "fields": {
+            "tipo": "Si/No (Justificar Si/No)"
+        },
+        "model": "explicacion_situacional.TipoPregunta"
+    },
+    {
+        "fields": {
+            "tipo": "Abierta"
+        },
+        "model": "explicacion_situacional.TipoPregunta"
+    },
+    {
+        "fields": {
+            "tipo": "Idicar Ubicación"
+        },
+        "model": "explicacion_situacional.TipoPregunta"
+    }
+]

@@ -1,0 +1,99 @@
+{% extends 'users.other.options.html' %}
+{% block titulo %}_-=SAPIC-Mis datos Basicos=-_{% endblock titulo %}
+
+{% block contenido_principal %}
+        <div class="panel-sapic">
+            <div class="page-header">
+                <h2>Datos Basicos</h2>
+            </div>
+            <h4>Datos Personales</h4>
+            <hr>
+            <br>
+            <div class="row">
+                <div class="col-md-3">
+                    <label> Nombres y Apellidos</label>
+                </div>
+                <div class="col-md-3">
+                    {{ upUser.fk_user.first_name }} {{ upUser.fk_user.last_name }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <label> Documento de Identidad </label>
+                </div>
+                <div class="col-md-3">
+                {% if "Administradores" in request.session.grupos %}
+                    {{ upUser.fk_tipo_documento }}-{{ upUser.id_perfil }}
+                {% else %}
+                    {{ upUser.fk_vocero.fk_tipo_documento }}-{{ upUser.fk_vocero.documento_identidad }}
+                {% endif %}
+                </div>
+            </div>
+            <hr>
+            <br>
+            <h4>Datos De la cuenta</h4>
+            <hr>
+            <br>
+            <div class="row">
+                <div class="col-md-3">
+                    <label> Nombre de usuario </label>
+                </div>
+                <div class="col-md-3">
+                    {{ upUser.fk_user.username }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <label> Correo Electronico </label>
+                </div>
+                <div class="col-md-3">
+                    {{ upUser.fk_user.email }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <label> Fecha de Registro </label>
+                </div>
+                <div class="col-md-3">
+                    {{ upUser.fk_user.date_joined }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    <label> Grupo de Usuario </label>
+                </div>
+                <div class="col-md-3">
+                    {{ request.session.grupos }}
+                </div>
+            </div>
+            <hr>
+            {% if "Voceros" in request.session.grupos %}
+                <br>
+                <h4>Datos de la Organizacion Social a la que Pertenece</h4>
+                <hr>
+                <div class="row">
+                    <div class="col-md-3">
+                        <label> Organizacion Social </label>
+                    </div>
+                    <div class="col-md-3">
+                        {{ upUser.fk_vocero.fk_org_social.nombre }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <label> Rol en la Organizacion </label>
+                    </div>
+                    <div class="col-md-4">
+                        Unidad: {{ upUser.fk_vocero.fk_rol_unidad }}
+                        {% ifequal  1 upUser.fk_vocero.fk_rol_unidad.pk %}
+                            <div class="row">
+                                Comite: {{ comite.fk_comite }}
+                            </div>
+                        {% endifequal %}
+                        
+                    </div>
+                </div>
+            {% endif %}
+            <br>
+        </div>
+{% endblock contenido_principal %}

@@ -1,0 +1,1 @@
+var JSON_DATA = "{% static 'DataTables/media/js/Spanish.json' %}"

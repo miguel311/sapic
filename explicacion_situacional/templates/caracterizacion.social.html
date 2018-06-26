@@ -1,0 +1,271 @@
+{% extends 'explicacion.situacional.html' %}
+{% load staticfiles %}
+{% block titulo %}_-=SAPIC-Caracterización Social=-_{% endblock titulo %}
+{% block contenido_principal %}
+    <div class="col-xs-12">
+        <div class="panel-sapic">
+            <section class="content-header">
+                  <h2>
+                    Caracterización Social
+                    <small>Muestra los sub-módulos de las características sociales y de la prestación de servicios públicos y privados de la comunidad</small>
+                  </h2>
+            </section>
+            <section class="content">
+                <div class="col-lg-12 col-xs-12">
+                  <!-- small box -->
+                  <div class="small-box bg-red">
+                    <div class="inner">
+                      <h3 title="titulo-estado-agua">Estado del Servicio de Agua </h3>
+
+                      <p align="justify">En este sub-módulo podrá registrar, consultar y modificar la situación de aguas blancas y aguas negras. </p>
+                    </div>
+                    <div class="icon">
+                      <i class="ion ion-cloud"></i>
+                    </div>
+                    <a href="{% url 'explicacion:servicio_agua' 3 %}" class="small-box-footer">Ingresar<i class="fa fa-arrow-circle-right"></i></a>
+                  </div>
+                </div>
+            </section>
+            <section class="content">
+                <div class="col-lg-12 col-xs-12">
+                  <!-- small box -->
+                  <div class="small-box bg-red">
+                    <div class="inner">
+                      <h3 title="titulo-estado-electricidad">Estado del Servicio de Electricidad y Gas </h3>
+
+                      <p align="justify">En este sub-módulo podrá registrar, consultar y modificar la situación de la electricidad y el gas. </p>
+                    </div>
+                    <div class="icon">
+                      <i class="ion ion-cloud"></i>
+                    </div>
+                    <a href="{% url 'explicacion:servicio_electricidad' 4 %}" class="small-box-footer">Ingresar<i class="fa fa-arrow-circle-right"></i></a>
+                  </div>
+                </div>
+            </section>
+            <section class="content">
+                <div class="col-lg-12 col-xs-12">
+                  <!-- small box -->
+                  <div class="small-box bg-red">
+                    <div class="inner">
+                      <h3 title="titulo-estado-infraestructura">Estado de la Infraestructura Vial </h3>
+
+                      <p align="justify">En este sub-módulo podrá registrar, consultar y modificar la situación de la vialidad. </p>
+                    </div>
+                    <div class="icon">
+                      <i class="ion ion-cloud"></i>
+                    </div>
+                    <a href="{% url 'explicacion:servicio_infraestructura' 5 %}" class="small-box-footer">Ingresar<i class="fa fa-arrow-circle-right"></i></a>
+                  </div>
+                </div>
+            </section>
+            <section class="content">
+                <div class="col-lg-12 col-xs-12">
+                  <!-- small box -->
+                  <div class="small-box bg-red">
+                    <div class="inner">
+                      <h3 title="titulo-estado-saneamiento">Estado de los Servicios Ambientales </h3>
+
+                      <p align="justify">En este sub-módulo podrá registrar, consultar y modificar la situación ambiental. </p>
+                    </div>
+                    <div class="icon">
+                      <i class="ion ion-cloud"></i>
+                    </div>
+                    <a href="{% url 'explicacion:servicio_saneamiento' 6 %}" class="small-box-footer">Ingresar<i class="fa fa-arrow-circle-right"></i></a>
+                  </div>
+                </div>
+            </section>
+            <section class="content">
+                <div class="col-lg-12 col-xs-12">
+                  <!-- small box -->
+                  <div class="small-box bg-red">
+                    <div class="inner">
+                      <h3 title="titulo-estado-salud">Estado de los Servicios de Salud </h3>
+
+                      <p align="justify">En este sub-módulo podrá registrar, consultar y modificar las situaciones de salud social. </p>
+                    </div>
+                    <div class="icon">
+                      <i class="ion ion-cloud"></i>
+                    </div>
+                    <a href="{% url 'explicacion:servicio_salud' 7 %}" class="small-box-footer">Ingresar<i class="fa fa-arrow-circle-right"></i></a>
+                  </div>
+                </div>
+            </section>
+            <section class="content">
+                <div class="col-lg-12 col-xs-12">
+                  <!-- small box -->
+                  <div class="small-box bg-red">
+                    <div class="inner">
+                      <h3 title="titulo-estado-educativo">Estado de los Servicios Educativos </h3>
+
+                      <p align="justify">En este sub-módulo podrá registrar, consultar y modificar la situación educativa. </p>
+                    </div>
+                    <div class="icon">
+                      <i class="ion ion-cloud"></i>
+                    </div>
+                    <a href="{% url 'explicacion:servicio_educativo' 8 %}" class="small-box-footer">Ingresar<i class="fa fa-arrow-circle-right"></i></a>
+                  </div>
+                </div>
+            </section>
+            <section class="content">
+                <div class="col-lg-12 col-xs-12">
+                  <!-- small box -->
+                  <div class="small-box bg-red">
+                    <div class="inner">
+                      <h3 title="titulo-estado-recreativo">Estado de los Servicios Recreativos </h3>
+
+                      <p align="justify">En este sub-módulo podrá registrar, consultar y modificar la situación de recreación. </p>
+                    </div>
+                    <div class="icon">
+                      <i class="ion ion-cloud"></i>
+                    </div>
+                    <a href="{% url 'explicacion:servicio_recreativo' 9 %}" class="small-box-footer">Ingresar<i class="fa fa-arrow-circle-right"></i></a>
+                  </div>
+                </div>
+            </section>
+            <section class="content">
+                <div class="col-lg-12 col-xs-12">
+                  <!-- small box -->
+                  <div class="small-box bg-red">
+                    <div class="inner">
+                      <h3 title="titulo-estado-deportivo">Estado de los Servicios Deportivos </h3>
+
+                      <p align="justify">En este sub-módulo podrá registrar, consultar y modificar la situación deportiva. </p>
+                    </div>
+                    <div class="icon">
+                      <i class="ion ion-cloud"></i>
+                    </div>
+                    <a href="{% url 'explicacion:servicio_deportivo' 10 %}" class="small-box-footer">Ingresar<i class="fa fa-arrow-circle-right"></i></a>
+                  </div>
+                </div>
+            </section>
+            <section class="content">
+                <div class="col-lg-12 col-xs-12">
+                  <!-- small box -->
+                  <div class="small-box bg-red">
+                    <div class="inner">
+                      <h3 title="titulo-estado-cultura">Estado de las Actividades Culturales </h3>
+
+                      <p align="justify">En este sub-módulo podrá registrar, consultar y modificar la situación cultural. </p>
+                    </div>
+                    <div class="icon">
+                      <i class="ion ion-cloud"></i>
+                    </div>
+                    <a href="{% url 'explicacion:servicio_cultura' 11 %}" class="small-box-footer">Ingresar<i class="fa fa-arrow-circle-right"></i></a>
+                  </div>
+                </div>
+            </section>
+            <section class="content">
+                <div class="col-lg-12 col-xs-12">
+                  <!-- small box -->
+                  <div class="small-box bg-red">
+                    <div class="inner">
+                      <h3 title="titulo-estado-telecomunicacion">Estado de las Telecomunicaciones </h3>
+
+                      <p align="justify">En este sub-módulo podrá registrar, consultar y modificar la situación de las telecomunicaciones. </p>
+                    </div>
+                    <div class="icon">
+                      <i class="ion ion-cloud"></i>
+                    </div>
+                    <a href="{% url 'explicacion:servicio_telecomunicacion' 12 %}" class="small-box-footer">Ingresar<i class="fa fa-arrow-circle-right"></i></a>
+                  </div>
+                </div>
+            </section>
+            <section class="content">
+                <div class="col-lg-12 col-xs-12">
+                  <!-- small box -->
+                  <div class="small-box bg-red">
+                    <div class="inner">
+                      <h3 title="titulo-estado-comunicacion">Estado de la Comunicación Social/Popular </h3>
+
+                      <p align="justify">En este sub-módulo podrá registrar, consultar y modificar la situación de la comunicación social. </p>
+                    </div>
+                    <div class="icon">
+                      <i class="ion ion-cloud"></i>
+                    </div>
+                    <a href="{% url 'explicacion:servicio_comunicacion' 13 %}" class="small-box-footer">Ingresar<i class="fa fa-arrow-circle-right"></i></a>
+                  </div>
+                </div>
+            </section>
+            <section class="content">
+                <div class="col-lg-12 col-xs-12">
+                  <!-- small box -->
+                  <div class="small-box bg-red">
+                    <div class="inner">
+                      <h3 title="titulo-estado-policia">Estado de los Servicios de Atención Policial </h3>
+
+                      <p align="justify">En este sub-módulo podrá registrar, consultar y modificar la situación de seguridad social. </p>
+                    </div>
+                    <div class="icon">
+                      <i class="ion ion-cloud"></i>
+                    </div>
+                    <a href="{% url 'explicacion:servicio_policia' 14 %}" class="small-box-footer">Ingresar<i class="fa fa-arrow-circle-right"></i></a>
+                  </div>
+                </div>
+            </section>
+            <section class="content">
+                <div class="col-lg-12 col-xs-12">
+                  <!-- small box -->
+                  <div class="small-box bg-red">
+                    <div class="inner">
+                      <h3 title="titulo-estado-bombero">Estado de los Servicios de Bomberos </h3>
+
+                      <p align="justify">En este sub-módulo podrá registrar, consultar y modificar la situación de los cuerpos de bomberos. </p>
+                    </div>
+                    <div class="icon">
+                      <i class="ion ion-cloud"></i>
+                    </div>
+                    <a href="{% url 'explicacion:servicio_bombero' 15 %}" class="small-box-footer">Ingresar<i class="fa fa-arrow-circle-right"></i></a>
+                  </div>
+                </div>
+            </section>
+            <section class="content">
+                <div class="col-lg-12 col-xs-12">
+                  <!-- small box -->
+                  <div class="small-box bg-red">
+                    <div class="inner">
+                      <h3 title="titulo-estado-proteccion">Estado de los Servicios de Protección Civil </h3>
+
+                      <p align="justify">En este sub-módulo podrá registrar, consultar y modificar la situación de protección y prevención. </p>
+                    </div>
+                    <div class="icon">
+                      <i class="ion ion-cloud"></i>
+                    </div>
+                    <a href="{% url 'explicacion:servicio_proteccion' 16 %}" class="small-box-footer">Ingresar<i class="fa fa-arrow-circle-right"></i></a>
+                  </div>
+                </div>
+            </section>
+            <section class="content">
+                <div class="col-lg-12 col-xs-12">
+                  <!-- small box -->
+                  <div class="small-box bg-red">
+                    <div class="inner">
+                      <h3 title="titulo-estado-jurisdiccion">Estado de la Atención Jurisdiccional </h3>
+
+                      <p align="justify">En este sub-módulo podrá registrar, consultar y modificar la situación de justicia social. </p>
+                    </div>
+                    <div class="icon">
+                      <i class="ion ion-cloud"></i>
+                    </div>
+                    <a href="{% url 'explicacion:servicio_jurisdiccion' 17 %}" class="small-box-footer">Ingresar<i class="fa fa-arrow-circle-right"></i></a>
+                  </div>
+                </div>
+            </section>
+            <section class="content">
+                <div class="col-lg-12 col-xs-12">
+                  <!-- small box -->
+                  <div class="small-box bg-red">
+                    <div class="inner">
+                      <h3 title="titulo-estado-incidente">Estado del Manejo de Incidentes </h3>
+
+                      <p align="justify">En este sub-módulo podrá registrar, consultar y modificar la situación de incidentes sociales. </p>
+                    </div>
+                    <div class="icon">
+                      <i class="ion ion-cloud"></i>
+                    </div>
+                    <a href="{% url 'explicacion:servicio_incidente' 18 %}" class="small-box-footer">Ingresar<i class="fa fa-arrow-circle-right"></i></a>
+                  </div>
+                </div>
+            </section>
+        </div>
+    </div>
+{% endblock contenido_principal %}

@@ -1,0 +1,42 @@
+{% extends 'explicacion.situacional.html' %}
+{% load staticfiles %}
+{% block titulo %}_-=SAPIC-Registrar Explicacion Situacional=-_{% endblock titulo %}
+<link rel="stylesheet" href="{% static 'plugins/bootstrap-fileinput/css/fileinput.min.css' %}">
+{% block extrajs %}
+<script src="{% static 'plugins/bootstrap-fileinput/js/fileinput.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'explicacion_situacional/explicacion_situacional_map.js' %}"></script>
+    {{ form.media }}
+{% endblock extrajs %}
+{% block contenido_principal %}
+    <div class="col-xs-12">
+        <div class="panel-sapic">
+            <section class="content-header">
+                  <h2>
+                    Registrar Explicacion Situacional
+                    <small>Muestra el formulario para agregar los datos de ubicacion de la organizacion social</small>
+                  </h2>
+            </section>
+            <section class="content">
+                <div class="row">
+                    <div class="col-md-12">
+                    </div>
+                </div>
+                <form method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-md-12">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                        </div>
+                    </div>
+                    <div class="row">
+                    <br>
+                        <div class="col-md-12">
+                            <button type="submit" class="btn btn-danger btn-block btn-fla">Agregar Ubicacion</button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+{% endblock contenido_principal %}
+

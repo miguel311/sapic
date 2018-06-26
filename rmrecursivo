@@ -1,0 +1,10 @@
+#!/bin/bash
+#Borrar de manera recursiva los ficheros inutiles.
+
+echo Directorio Raiz: $PWD
+echo Procesando...
+
+find $PWD \( -name \*~ -or -name \*.o -or -name \*\# -or -name \*.pyc \) -exec rm -vf {} \;
+find $PWD  -name "000[2-9]*.pyc" | xargs rm  -r
+
+echo Listo!

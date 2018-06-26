@@ -1,0 +1,91 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="es">
+    <!-- Inicio Bloque head-->
+    <head>
+    {% block head %}
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" charset="UTF-8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- favicon -->
+        <link rel="shortcut icon" type="image/png" href="{% static 'icon/favicon.ico' %}"/>
+    {% endblock head %}
+        <!-- Inicio Bloque Título-->
+        <title>{% block titulo%}  {%endblock titulo %}</title>
+        <!-- Fin Bloque Título-->
+        {% block css %}
+        <!-- Inicio De las hojas de estilos -->
+        <link rel="stylesheet" href="{% static 'bootstrap-3/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
+        <!-- Theme style -->
+        <link rel="stylesheet" href="{% static 'dist/css/AdminLTE.min.css' %}">
+
+        <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
+            page. However, you can choose any other skin. Make sure you
+            apply the skin class to the body tag so the changes take effect.
+        -->
+        <link rel="stylesheet" href="{% static 'dist/css/skins/skin-blue.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/css_custom.css' %}">
+        {% endblock css %}
+        <!-- Fin De las hojas de estilos -->
+        <!-- Inicio De los js -->
+        <!-- Constantes -->
+        <script src="{% static 'js/constantes_SAPIC.js' %}"></script>
+        {% block constantes %}
+        <script type="text/javascript">
+            var JSON_DATA = "{% static 'DataTables/media/js/Spanish.json' %}"
+        </script>
+        {% endblock constantes %}
+        <!-- FIn de las constantes -->
+        {% block js %}
+        <script src="{% static 'jquery/jquery-3.1.0.min.js' %}"></script>
+        <script src="{% static 'bootstrap-3/js/bootstrap.min.js' %}"></script>
+        {% endblock js %}
+        <!-- Fin De los js -->
+        <!-- Inicio del bloque para las constantes extras de los modulos -->
+        {% block extra_constantes %}
+
+        {% endblock extra_constantes %}
+        <!-- Fin del bloque para las constantes extras de los modulos -->
+        <!-- Inicio de los css extras -->
+        {% block extracss %}{% endblock extracss %}
+        <!-- Fin de los css extras -->
+        <!-- Inicio de los js extras -->
+        {% block extrajs %}{% endblock extrajs %}
+        <!-- Fin de los js extras -->
+    </head>
+    <!-- Fin Bloque Head -->
+    <!-- Incio Bloque Body -->
+    <body>
+        <div class="contenedor-sapic">
+            {% block cabecera %}
+                <!-- Agrega elementos a la cabecera -->
+                {% include 'base.header.html'%}
+            {% endblock cabecera %}
+            <div class="menu-sapic">
+                {% block menu %}
+                <!-- Agrega elementos al menu -->
+                    {% include 'base.menu.html' %}
+                {% endblock menu %}
+                {% block msjs %}
+                <!-- Agrega elementos al mensaje -->
+                    {% include 'base.mensajes.html' %}
+                {% endblock msjs %}
+            </div>
+            {% block contenido %}
+            <!-- Agrega elementos al contenido -->
+            {% endblock contenido %}
+            {% block modals %}
+            <!-- Agrega elementos para el modals -->
+            {% endblock modals %}
+            {% block pie %}
+            <!-- Agrega elementos al pie -->
+                {% include 'base.footer.html' %}
+            {% endblock pie %}
+        </div>
+    </body>
+    <!-- Fin Bloque Body -->
+</html>

@@ -1,0 +1,1748 @@
+[
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 1,
+    "fields": {
+      "texto_pregunta": "\u00bfC\u00f3mo debe ser, desde el punto de vista legal, la propiedad y/o tenencia de las tierras en la comunidad, seg\u00fan la forma en que ocuparon \u00e9sta?.",
+      "tipo_pregunta": 5,
+      "consulta": 1
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 2,
+    "fields": {
+      "texto_pregunta": "\u00bfTodas las familias de la comunidad tienen documentos de propiedad o tenencia de la tierra que ocupan debidamente registrados?.",
+      "tipo_pregunta": 4,
+      "consulta": 1
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 3,
+    "fields": {
+      "texto_pregunta": "\u00bfLa comunidad cuenta con organizaciones productoras de bienes y/o servicios b\u00e1sicos que provienen de entornos que no sean monopolios privados y/o   p\u00fablicos?.",
+      "tipo_pregunta": 4,
+      "consulta": 2
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 4,
+    "fields": {
+      "texto_pregunta": "\u00bfLa comunidad cuenta con capacidades (en t\u00e9rminos de mano de obra, conocimientos, maquinarias, espacios, etc.) para producir bienes y/o servicios  b\u00e1sicos?.",
+      "tipo_pregunta": 4,
+      "consulta": 2
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 5,
+    "fields": {
+      "texto_pregunta": "\u00bfEn la comunidad se dan procesos no monopolizados de venta de bienes y/o servicios?.",
+      "tipo_pregunta": 4,
+      "consulta": 2
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 6,
+    "fields": {
+      "texto_pregunta": "\u00bfQui\u00e9n es el encargado del servicio de agua potable?.",
+      "tipo_pregunta": 5,
+      "consulta": 3
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 7,
+    "fields": {
+      "texto_pregunta": "\u00bfEl acueducto est\u00e1 construido con los materiales adecuados que garantizan la salud?.",
+      "tipo_pregunta": 4,
+      "consulta": 3
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 8,
+    "fields": {
+      "texto_pregunta": "\u00bfEl agua se depura con m\u00e9todos confiables?.",
+      "tipo_pregunta": 4,
+      "consulta": 3
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 9,
+    "fields": {
+      "texto_pregunta": "\u00bfC\u00f3mo es la calidad del agua para uso dom\u00e9stico y/o productivo local?.",
+      "tipo_pregunta": 1,
+      "consulta": 3
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 10,
+    "fields": {
+      "texto_pregunta": "\u00bfEl modo en que se trae el agua a la comunidad se puede mantener en el futuro pr\u00f3ximo?",
+      "tipo_pregunta": 4,
+      "consulta": 3
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 11,
+    "fields": {
+      "texto_pregunta": "\u00bfLa distribuci\u00f3n del agua es buena en t\u00e9rminos de presi\u00f3n y constancia?",
+      "tipo_pregunta": 1,
+      "consulta": 3
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 12,
+    "fields": {
+      "texto_pregunta": "\u00bfTodos los hogares de la comunidad pagan por el servicio de agua?",
+      "tipo_pregunta": 4,
+      "consulta": 3
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 13,
+    "fields": {
+      "texto_pregunta": "\u00bfQui\u00e9n es encargado del servicio de energ\u00eda el\u00e9ctrica y distribuci\u00f3n de gas?",
+      "tipo_pregunta": 5,
+      "consulta": 4
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 14,
+    "fields": {
+      "texto_pregunta": "\u00bfCu\u00e1l es la calidad de la prestaci\u00f3n en t\u00e9rminos de constancia en la transmisi\u00f3n y constancia de la fuerza para la electricidad?.",
+      "tipo_pregunta": 1,
+      "consulta": 4
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 15,
+    "fields": {
+      "texto_pregunta": "\u00bfLa provisi\u00f3n de gas es constante?.",
+      "tipo_pregunta": 4,
+      "consulta": 4
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 16,
+    "fields": {
+      "texto_pregunta": "\u00bfCu\u00e1l es el estado general de los materiales y equipos de producci\u00f3n y distribuci\u00f3n de energ\u00eda el\u00e9ctrica?.",
+      "tipo_pregunta": 1,
+      "consulta": 4
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 17,
+    "fields": {
+      "texto_pregunta": "\u00bfCu\u00e1l es el estado general de los equipos de distribuci\u00f3n del gas?.",
+      "tipo_pregunta": 1,
+      "consulta": 4
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 18,
+    "fields": {
+      "texto_pregunta": "\u00bfEl encargado de la provisi\u00f3n de los servicios tambi\u00e9n da mantenimiento constante?",
+      "tipo_pregunta": 4,
+      "consulta": 4
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 19,
+    "fields": {
+      "texto_pregunta": "\u00bfLas instalaciones, equipos y materiales privados, dom\u00e9sticos o productivos contenidos en la comunidad son energ\u00e9ticamente eficientes y seguros?.",
+      "tipo_pregunta": 4,
+      "consulta": 4
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 24,
+    "fields": {
+      "texto_pregunta": "\u00bfQui\u00e9n es el encargado del correcto funcionamiento y mantenimiento de los servicios de infraestructura vial?",
+      "tipo_pregunta": 5,
+      "consulta": 5
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 25,
+    "fields": {
+      "texto_pregunta": "\u00bfLas infraestructuras viales existentes en la comunidad son realmente de dominio comunitario o corresponden con otros intereses ajenos al Desarrollo  Humano Integral de la comunidad?",
+      "tipo_pregunta": 1,
+      "consulta": 5
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 26,
+    "fields": {
+      "texto_pregunta": "\u00bfHay se\u00f1alizaci\u00f3n vial necesaria e informaci\u00f3n general para el transe\u00fante, adem\u00e1s de los servicios, instalaciones o acondicionamientos como pasos a nivel (rayado), pasarelas, sem\u00e1foros peatonales, paradas para transporte p\u00fablico, iluminaci\u00f3n p\u00fablica, cestas para desechos, ornato en general, rampas de acceso preferente para personas con discapacidad motora u otras funcionalidades alternas?",
+      "tipo_pregunta": 4,
+      "consulta": 5
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 27,
+    "fields": {
+      "texto_pregunta": "\u00bfLos pasos peatonales est\u00e1n exentos de t\u00famulos o elementos met\u00e1licos que quedan del corte o retiro incompleto de se\u00f1ales u ornato inutilizado o anclajes para \u201cvientos\u201d de postes (guayas) o los mismos postes?",
+      "tipo_pregunta": 4,
+      "consulta": 5
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 28,
+    "fields": {
+      "texto_pregunta": "\u00bfLas aceras est\u00e1n bien diferenciadas de la calzada y uniformes en su superficie para garantizar el paso fluido de los peatones?",
+      "tipo_pregunta": 4,
+      "consulta": 5
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 29,
+    "fields": {
+      "texto_pregunta": "\u00bfLas calzadas tienen la superficie uniforme para garantizar la fluidez del tr\u00e1nsito de veh\u00edculos?",
+      "tipo_pregunta": 4,
+      "consulta": 5
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 30,
+    "fields": {
+      "texto_pregunta": "\u00bfLa se\u00f1alizaci\u00f3n de paso de veh\u00edculos especiales o reba\u00f1os animales est\u00e1 claramente detallada?",
+      "tipo_pregunta": 4,
+      "consulta": 5
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 31,
+    "fields": {
+      "texto_pregunta": "\u00bfQui\u00e9n es el responsable operativo por el servicio de saneamiento ambiental en el entorno inmediato de la comunidad?",
+      "tipo_pregunta": 5,
+      "consulta": 6
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 32,
+    "fields": {
+      "texto_pregunta": "\u00bfHay industrias (peque\u00f1os talleres incluidos) produciendo ruidos, aguas residuales y / o gases muy contaminantes en la comunidad?",
+      "tipo_pregunta": 4,
+      "consulta": 6
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 33,
+    "fields": {
+      "texto_pregunta": "\u00bfEl sitio en el que descargan las aguas residuales es adecuado para tal fin?",
+      "tipo_pregunta": 4,
+      "consulta": 6
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 34,
+    "fields": {
+      "texto_pregunta": "\u00bfEl tratamiento de las aguas residuales es el apropiado para tal fin?",
+      "tipo_pregunta": 4,
+      "consulta": 6
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 35,
+    "fields": {
+      "texto_pregunta": "\u00bfEl tipo de basura que produce la comunidad podr\u00eda ser utilizada para generar productos que beneficien a \u00e9sta?",
+      "tipo_pregunta": 4,
+      "consulta": 6
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 36,
+    "fields": {
+      "texto_pregunta": "\u00bfEl tratamiento de los desechos s\u00f3lidos de la comunidad es adecuado?",
+      "tipo_pregunta": 4,
+      "consulta": 6
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 37,
+    "fields": {
+      "texto_pregunta": "\u00bfCu\u00e1les servicios se asocian con el saneamiento ambiental?",
+      "tipo_pregunta": 5,
+      "consulta": 6
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 38,
+    "fields": {
+      "texto_pregunta": "\u00bfQui\u00e9nes son los responsables de esos servicios?",
+      "tipo_pregunta": 5,
+      "consulta": 6
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 39,
+    "fields": {
+      "texto_pregunta": "\u00bfLa frecuencia de prestaci\u00f3n es suficiente para garantizar el ambiente sano y la salud colectiva del comunidad, con \u00e9nfasis en ni\u00f1os, adolescentes, adultos mayores y personas con discapacidad?",
+      "tipo_pregunta": 4,
+      "consulta": 6
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 40,
+    "fields": {
+      "texto_pregunta": "\u00bfSe hacen evaluaciones de calidad de suelos, aguas, aire en la comunidad con frecuencia?",
+      "tipo_pregunta": 4,
+      "consulta": 6
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 41,
+    "fields": {
+      "texto_pregunta": "\u00bfEl gobierno comunitario o comunal interviene de manera pertinente en el tema del saneamiento ambiental?",
+      "tipo_pregunta": 4,
+      "consulta": 6
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 42,
+    "fields": {
+      "texto_pregunta": "\u00bfExisten servicios de atenci\u00f3n primaria en salud en el territorio de la comunidad?",
+      "tipo_pregunta": 4,
+      "consulta": 7
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 43,
+    "fields": {
+      "texto_pregunta": "\u00bfConsidera que estos servicios son suficientes para cubrir las necesidades de salud primaria de la comunidad?",
+      "tipo_pregunta": 4,
+      "consulta": 7
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 44,
+    "fields": {
+      "texto_pregunta": "\u00bfQui\u00e9nes son responsables por este servicio?",
+      "tipo_pregunta": 5,
+      "consulta": 7
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 45,
+    "fields": {
+      "texto_pregunta": "\u00bfC\u00f3mo es su desempe\u00f1o?",
+      "tipo_pregunta": 1,
+      "consulta": 7
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 46,
+    "fields": {
+      "texto_pregunta": "\u00bfCu\u00e1les servicios de atenci\u00f3n en salud secundarios, terciarios y especialidades est\u00e1n disponibles para los integrantes de la comunidad?",
+      "tipo_pregunta": 5,
+      "consulta": 7
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 47,
+    "fields": {
+      "texto_pregunta": "\u00bfLos servicios infraestructurales asociados con estas entidades de atenci\u00f3n en salud son \u00f3ptimos?",
+      "tipo_pregunta": 4,
+      "consulta": 7
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 48,
+    "fields": {
+      "texto_pregunta": "\u00bfEl personal es suficiente en t\u00e9rminos de cantidad necesaria por \u00e1rea de atenci\u00f3n?",
+      "tipo_pregunta": 4,
+      "consulta": 7
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 49,
+    "fields": {
+      "texto_pregunta": "\u00bfEl personal presta su servicio con eficiencia y buena disposici\u00f3n?",
+      "tipo_pregunta": 4,
+      "consulta": 7
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 50,
+    "fields": {
+      "texto_pregunta": "\u00bfEl horario de funcionamiento de los servicios primarios y secundarios es suficiente?",
+      "tipo_pregunta": 4,
+      "consulta": 7
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 51,
+    "fields": {
+      "texto_pregunta": "\u00bfSe consideran suficientes los servicios de educaci\u00f3n que est\u00e1n disponibles en el territorio de la comunidad?",
+      "tipo_pregunta": 4,
+      "consulta": 8
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 52,
+    "fields": {
+      "texto_pregunta": "\u00bfExiste alg\u00fan servicio de biblioteca en la comunidad?",
+      "tipo_pregunta": 4,
+      "consulta": 8
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 53,
+    "fields": {
+      "texto_pregunta": "\u00bfExisten servicios de divulgaci\u00f3n y/o desarrollo cient\u00edfico y tecnol\u00f3gico en el territorio de la comunidad?",
+      "tipo_pregunta": 4,
+      "consulta": 8
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 54,
+    "fields": {
+      "texto_pregunta": "\u00bfQui\u00e9nes son responsables por este servicio?",
+      "tipo_pregunta": 5,
+      "consulta": 8
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 55,
+    "fields": {
+      "texto_pregunta": "\u00bfLa investigaci\u00f3n aplicada y/o el desarrollo de tecnolog\u00edas es pertinente a las necesidades del entorno?",
+      "tipo_pregunta": 4,
+      "consulta": 8
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 56,
+    "fields": {
+      "texto_pregunta": "\u00bfC\u00f3mo es la calidad de los servicios infraestructurales y funcionales asociados estas entidades de atenci\u00f3n en educaci\u00f3n?",
+      "tipo_pregunta": 1,
+      "consulta": 8
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 57,
+    "fields": {
+      "texto_pregunta": "\u00bfEl personal es suficiente en t\u00e9rminos de cantidad necesaria por \u00e1rea de atenci\u00f3n?",
+      "tipo_pregunta": 4,
+      "consulta": 8
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 58,
+    "fields": {
+      "texto_pregunta": "\u00bfEl horario de funcionamiento de los servicios es suficiente?",
+      "tipo_pregunta": 4,
+      "consulta": 8
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 59,
+    "fields": {
+      "texto_pregunta": "\u00bfLa utilizaci\u00f3n de la informaci\u00f3n producida en el entorno educativo universitario (de ser el caso) es p\u00fablica?",
+      "tipo_pregunta": 4,
+      "consulta": 8
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 60,
+    "fields": {
+      "texto_pregunta": "\u00bfCu\u00e1l es el uso que los integrantes de la comunidad hace de estos servicios?",
+      "tipo_pregunta": 5,
+      "consulta": 8
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 61,
+    "fields": {
+      "texto_pregunta": "\u00bfExisten plazas p\u00fablicas, ciclo-v\u00edas o parques p\u00fablicos en el territorio de la comunidad?",
+      "tipo_pregunta": 4,
+      "consulta": 9
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 62,
+    "fields": {
+      "texto_pregunta": "\u00bfCu\u00e1les otros servicios de recreaci\u00f3n est\u00e1n disponibles en el territorio de la comunidad?",
+      "tipo_pregunta": 5,
+      "consulta": 9
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 63,
+    "fields": {
+      "texto_pregunta": "\u00bfQui\u00e9nes son responsables por estos servicio?",
+      "tipo_pregunta": 5,
+      "consulta": 9
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 64,
+    "fields": {
+      "texto_pregunta": "\u00bfC\u00f3mo calificar\u00eda la calidad de los servicios infraestructurales y funcionales asociados con la prestaci\u00f3n de los servicios recreativos existentes?",
+      "tipo_pregunta": 1,
+      "consulta": 9
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 65,
+    "fields": {
+      "texto_pregunta": "\u00bfEl personal es suficiente en t\u00e9rminos de cantidad necesaria por \u00e1rea de atenci\u00f3n?",
+      "tipo_pregunta": 4,
+      "consulta": 9
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 66,
+    "fields": {
+      "texto_pregunta": "\u00bfCu\u00e1l es el uso que los integrantes de la comunidad hace de estos servicios?",
+      "tipo_pregunta": 5,
+      "consulta": 9
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 67,
+    "fields": {
+      "texto_pregunta": "\u00bfExisten bares, discotecas, casa de citas, salas de juegos quietos u otros servicios en el territorio de la comunidad que pudieran afectar el bienestar de \u00e9sta?",
+      "tipo_pregunta": 4,
+      "consulta": 9
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 68,
+    "fields": {
+      "texto_pregunta": "\u00bfSe consideran suficientes los servicios de desarrollo deportivo que est\u00e1n disponibles en el territorio de la comunidad?",
+      "tipo_pregunta": 4,
+      "consulta": 10
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 69,
+    "fields": {
+      "texto_pregunta": "\u00bfQui\u00e9nes son responsables por este servicio?",
+      "tipo_pregunta": 5,
+      "consulta": 10
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 70,
+    "fields": {
+      "texto_pregunta": "\u00bfCu\u00e1l es la calidad de los servicios infraestructurales y funcionales asociados con la prestaci\u00f3n de los servicios deportivos?",
+      "tipo_pregunta": 1,
+      "consulta": 10
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 71,
+    "fields": {
+      "texto_pregunta": "\u00bfEl personal es suficiente en t\u00e9rminos de cantidad necesaria por \u00e1rea de atenci\u00f3n?",
+      "tipo_pregunta": 4,
+      "consulta": 10
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 72,
+    "fields": {
+      "texto_pregunta": "\u00bfEl horario de funcionamiento de los servicios es suficiente?",
+      "tipo_pregunta": 4,
+      "consulta": 10
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 73,
+    "fields": {
+      "texto_pregunta": "\u00bfCu\u00e1les son los resultados de prestaci\u00f3n del servicio para la comunidad y la naci\u00f3n?",
+      "tipo_pregunta": 5,
+      "consulta": 10
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 74,
+    "fields": {
+      "texto_pregunta": "\u00bfCu\u00e1l es el uso que los integrantes de la comunidad hace de estos servicios?",
+      "tipo_pregunta": 5,
+      "consulta": 10
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 75,
+    "fields": {
+      "texto_pregunta": "\u00bfExisten cinematecas, salas de proyecci\u00f3n de cine o teatrales, teatrinos para t\u00edteres p\u00fablicos o privados en el territorio de la comunidad?",
+      "tipo_pregunta": 4,
+      "consulta": 11
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 76,
+    "fields": {
+      "texto_pregunta": "\u00bfExisten salas de exposiciones, galer\u00edas, pinacotecas, museos p\u00fablicos o privados en el territorio de la comuna?",
+      "tipo_pregunta": 4,
+      "consulta": 11
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 77,
+    "fields": {
+      "texto_pregunta": "\u00bfExisten librer\u00edas p\u00fablicas o privadas en el territorio de la comunidad?",
+      "tipo_pregunta": 4,
+      "consulta": 11
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 78,
+    "fields": {
+      "texto_pregunta": "\u00bfExisten audiotecas, salas de conciertos o entornos para artes auditivas en general p\u00fablicos o privados en el territorio de la comunidad?",
+      "tipo_pregunta": 4,
+      "consulta": 11
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 79,
+    "fields": {
+      "texto_pregunta": "\u00bfExisten casas o centros culturales o escuelas de artes p\u00fablicas o privadas en el territorio de la comunidad?",
+      "tipo_pregunta": 4,
+      "consulta": 11
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 80,
+    "fields": {
+      "texto_pregunta": "\u00bfExisten templos de cualquier culto m\u00edstico o religi\u00f3n en el territorio de la comunidad?",
+      "tipo_pregunta": 4,
+      "consulta": 11
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 81,
+    "fields": {
+      "texto_pregunta": "\u00bfDesarrollan programas educativos o formativos en sus entendimientos religiosos o m\u00edsticos?",
+      "tipo_pregunta": 4,
+      "consulta": 11
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 82,
+    "fields": {
+      "texto_pregunta": "\u00bfQui\u00e9nes son responsables por todos estos servicios?",
+      "tipo_pregunta": 5,
+      "consulta": 11
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 83,
+    "fields": {
+      "texto_pregunta": "\u00bfCu\u00e1l es la calidad de los servicios infraestructurales y funcionales asociados con la prestaci\u00f3n de los servicios culturales que tiene la comunidad?",
+      "tipo_pregunta": 1,
+      "consulta": 11
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 84,
+    "fields": {
+      "texto_pregunta": "\u00bfEl personal es suficiente en t\u00e9rminos de cantidad necesaria para las prestaciones?",
+      "tipo_pregunta": 4,
+      "consulta": 11
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 85,
+    "fields": {
+      "texto_pregunta": "\u00bfEl horario de funcionamiento de los servicios es suficiente?",
+      "tipo_pregunta": 4,
+      "consulta": 11
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 86,
+    "fields": {
+      "texto_pregunta": "\u00bfCu\u00e1l es el efecto de cualquiera de estos servicios en la vida de la comunidad en general?",
+      "tipo_pregunta": 1,
+      "consulta": 11
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 87,
+    "fields": {
+      "texto_pregunta": "\u00bfQu\u00e9 fiestas religiosas p\u00fablicas, ferias culturales (o anticulturales), ferias de cosecha, efem\u00e9rides patriotas, festivales de cualquier expresi\u00f3n art\u00edstica o fiestas populares se celebran en el territorio de la comunidad, y en que per\u00edodo?",
+      "tipo_pregunta": 5,
+      "consulta": 11
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 88,
+    "fields": {
+      "texto_pregunta": "De no existir estos servicios en el territorio de la comunidad \u00bfhay programas o servicios adicionales que garanticen su accesibilidad social y territorial?",
+      "tipo_pregunta": 4,
+      "consulta": 11
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 89,
+    "fields": {
+      "texto_pregunta": "\u00bfCu\u00e1l es el uso que los integrantes de la comunidad hace de estos servicios?",
+      "tipo_pregunta": 5,
+      "consulta": 11
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 90,
+    "fields": {
+      "texto_pregunta": "\u00bfExisten servicios postales, de correo, p\u00fablicos o privados en el territorio de la comunidad?",
+      "tipo_pregunta": 4,
+      "consulta": 12
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 91,
+    "fields": {
+      "texto_pregunta": "\u00bfExiste servicio de conexi\u00f3n inal\u00e1mbrica p\u00fablica o privada a Internet en el territorio de la comunidad?",
+      "tipo_pregunta": 4,
+      "consulta": 12
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 92,
+    "fields": {
+      "texto_pregunta": "\u00bfExiste servicio de Infocentro o cualquier otro servicio de acceso y uso de servicios computacionales y en telecomunicaciones (centros de llamadas telef\u00f3nicas) en el territorio de la comuna?",
+      "tipo_pregunta": 4,
+      "consulta": 12
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 93,
+    "fields": {
+      "texto_pregunta": "\u00bfHay equipos p\u00fablicos de telefon\u00eda p\u00fablica o privada funcionales en el territorio de la comunidad?",
+      "tipo_pregunta": 4,
+      "consulta": 12
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 94,
+    "fields": {
+      "texto_pregunta": "\u00bfCu\u00e1l es el nivel de porcentaje de acceso a internet por parte de los hogares de la comunidad?",
+      "tipo_pregunta": 1,
+      "consulta": 12
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 95,
+    "fields": {
+      "texto_pregunta": "\u00bfExiste acceso a la se\u00f1al de la red de Televisi\u00f3n Digital Abierta en el territorio de la comuna?",
+      "tipo_pregunta": 4,
+      "consulta": 12
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 96,
+    "fields": {
+      "texto_pregunta": "\u00bfHay usuarios del servicio de televisi\u00f3n directa satelital p\u00fablica o privada en el territorio de la comunidad?",
+      "tipo_pregunta": 4,
+      "consulta": 12
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 97,
+    "fields": {
+      "texto_pregunta": "\u00bfCu\u00e1l es el grado de acceso de la poblaci\u00f3n a este servicio?",
+      "tipo_pregunta": 1,
+      "consulta": 12
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 98,
+    "fields": {
+      "texto_pregunta": "\u00bfHay usuarios de distribuci\u00f3n de televisi\u00f3n por suscripci\u00f3n transportada por cable en el territorio de la comunidad?",
+      "tipo_pregunta": 4,
+      "consulta": 12
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 99,
+    "fields": {
+      "texto_pregunta": "\u00bfSe captan se\u00f1ales de radiodifusi\u00f3n en amplitud modulada en el territorio de la comunidad?",
+      "tipo_pregunta": 4,
+      "consulta": 12
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 100,
+    "fields": {
+      "texto_pregunta": "\u00bfSe captan se\u00f1ales de radiodifusi\u00f3n en frecuencia modulada en el territorio de la comunidad?",
+      "tipo_pregunta": 4,
+      "consulta": 12
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 101,
+    "fields": {
+      "texto_pregunta": "\u00bfSe captan se\u00f1ales de televisi\u00f3n abierta en VHF o UHF en el territorio de la comunidad?",
+      "tipo_pregunta": 4,
+      "consulta": 12
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 102,
+    "fields": {
+      "texto_pregunta": "\u00bfHay emisoras de radiodifusi\u00f3n sonora en el territorio de la comunidad?",
+      "tipo_pregunta": 3,
+      "consulta": 12
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 103,
+    "fields": {
+      "texto_pregunta": "\u00bfLos estudios de estas emisoras est\u00e1n tambi\u00e9n en el territorio de la comunidad?",
+      "tipo_pregunta": 4,
+      "consulta": 12
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 104,
+    "fields": {
+      "texto_pregunta": "\u00bfQu\u00e9 tipo de se\u00f1al emiten (AM o FM)?",
+      "tipo_pregunta": 1,
+      "consulta": 12
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 105,
+    "fields": {
+      "texto_pregunta": "\u00bfHay emisoras de televisi\u00f3n en el territorio de la comunidad?",
+      "tipo_pregunta": 3,
+      "consulta": 12
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 106,
+    "fields": {
+      "texto_pregunta": "\u00bfQu\u00e9 tipo de transporte tienen sus se\u00f1ales (satelital directa, TDA, abierta en UHF o VHF)?",
+      "tipo_pregunta": 1,
+      "consulta": 12
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 107,
+    "fields": {
+      "texto_pregunta": "De las emisoras que transmiten y/o tienen sus estudios desde el territorio de la comunidad \u00bfcu\u00e1les son comunitarias?",
+      "tipo_pregunta": 5,
+      "consulta": 13
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 108,
+    "fields": {
+      "texto_pregunta": "\u00bfSu programaci\u00f3n en general atiende realmente las necesidades espirituales y comunicativas de la comunidad?",
+      "tipo_pregunta": 4,
+      "consulta": 13
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 109,
+    "fields": {
+      "texto_pregunta": "\u00bfHay integrantes de la comunidad entre su personal?",
+      "tipo_pregunta": 4,
+      "consulta": 13
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 110,
+    "fields": {
+      "texto_pregunta": "\u00bfSe transmiten manifestaciones art\u00edsticas originadas de la tradici\u00f3n cultural de la comunidad?",
+      "tipo_pregunta": 4,
+      "consulta": 13
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 111,
+    "fields": {
+      "texto_pregunta": "\u00bfLos servicios de noticias de las emisoras comunitarias que hay en el territorio tienen agenda en los procesos propios de la comunidad?",
+      "tipo_pregunta": 4,
+      "consulta": 13
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 112,
+    "fields": {
+      "texto_pregunta": "\u00bfEn qu\u00e9 nivel de porcentaje de los hogares que hay en el territorio de la comunidad se escucha generalmente la programaci\u00f3n de las emisoras comunitarias propias?",
+      "tipo_pregunta": 1,
+      "consulta": 13
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 113,
+    "fields": {
+      "texto_pregunta": "\u00bfHay respuesta oportuna a llamadas de urgencia?",
+      "tipo_pregunta": 4,
+      "consulta": 14
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 114,
+    "fields": {
+      "texto_pregunta": "\u00bfHay patrullaje rutinario en el territorio de la comunidad?",
+      "tipo_pregunta": 4,
+      "consulta": 14
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 115,
+    "fields": {
+      "texto_pregunta": "\u00bfSe han puesto en pr\u00e1ctica los planes nacionales de prevenci\u00f3n?",
+      "tipo_pregunta": 4,
+      "consulta": 14
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 116,
+    "fields": {
+      "texto_pregunta": "\u00bfHa habido respuesta oportuna y eficaz a las llamadas de urgencia?",
+      "tipo_pregunta": 4,
+      "consulta": 15
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 117,
+    "fields": {
+      "texto_pregunta": "\u00bfHan tenido jornadas de educaci\u00f3n preventiva y alerta temprana implementadas en el territorio de la comunidad?",
+      "tipo_pregunta": 4,
+      "consulta": 15
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 118,
+    "fields": {
+      "texto_pregunta": "\u00bfHan tenido jornadas de educaci\u00f3n preventiva y alerta temprana implementadas en el territorio de la comunidad?",
+      "tipo_pregunta": 4,
+      "consulta": 16
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 119,
+    "fields": {
+      "texto_pregunta": "\u00bfCu\u00e1l es el nivel de porcentaje hist\u00f3rico de casos llevados a tribunales a partir de situaciones crimin\u00f3genas o criminales ocurridas en el territorio de la comunidad o que hayan afectado a la comunidad individual o colectivamente de alg\u00fan modo?",
+      "tipo_pregunta": 1,
+      "consulta": 17
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 120,
+    "fields": {
+      "texto_pregunta": "\u00bfHay percepci\u00f3n de impunidad en el entorno de la comunidad?",
+      "tipo_pregunta": 4,
+      "consulta": 17
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 121,
+    "fields": {
+      "texto_pregunta": "\u00bfCu\u00e1les situaciones de ataques contra personas suelen ocurrir en el territorio de la comunidad?;",
+      "tipo_pregunta": 5,
+      "consulta": 18
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 122,
+    "fields": {
+      "texto_pregunta": "\u00bfCu\u00e1l es el nivel de porcentaje hist\u00f3rico de ataques contra personas, sobre el territorio de la comunidad por mes en el m\u00e1s reciente a\u00f1o?",
+      "tipo_pregunta": 1,
+      "consulta": 18
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 123,
+    "fields": {
+      "texto_pregunta": "\u00bfCu\u00e1les situaciones de ataques contra bienes suelen ocurrir en el territorio de la comunidad?",
+      "tipo_pregunta": 5,
+      "consulta": 18
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 124,
+    "fields": {
+      "texto_pregunta": "\u00bfCu\u00e1l es el nivel de porcentaje hist\u00f3rico de ataques contra el patrimonio, sobre el territorio de la comunidad por mes en el m\u00e1s reciente a\u00f1o?",
+      "tipo_pregunta": 1,
+      "consulta": 18
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 125,
+    "fields": {
+      "texto_pregunta": "\u00bfCu\u00e1les situaciones de incendios, colapsos, entre otros han ocurrido en el territorio de la comunidad en el m\u00e1s reciente a\u00f1o?",
+      "tipo_pregunta": 5,
+      "consulta": 18
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 126,
+    "fields": {
+      "texto_pregunta": "\u00bfLa reacci\u00f3n de los habitantes y usuarios de la comunidad ha solucionado la situaci\u00f3n?",
+      "tipo_pregunta": 4,
+      "consulta": 18
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 127,
+    "fields": {
+      "texto_pregunta": "\u00bfHa ocurrido vertido o escape de sustancias t\u00f3xicas en suelos, cuerpos de agua, o al aire?",
+      "tipo_pregunta": 4,
+      "consulta": 18
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 128,
+    "fields": {
+      "texto_pregunta": "\u00bfLa respuesta de los habitantes y usuarios de la comunidad ha solucionado la situaci\u00f3n?",
+      "tipo_pregunta": 4,
+      "consulta": 18
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 129,
+    "fields": {
+      "texto_pregunta": "\u00bfHan ocurrido sismos, inundaciones, incendios forestales, entre otros, con impacto sobre la comunidad?",
+      "tipo_pregunta": 4,
+      "consulta": 18
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 130,
+    "fields": {
+      "texto_pregunta": "\u00bfLa reacci\u00f3n de los habitantes y usuarios de la comunidad ha solucionado la situaci\u00f3n?",
+      "tipo_pregunta": 4,
+      "consulta": 18
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 131,
+    "fields": {
+      "texto_pregunta": "\u00bfSe ha elaborado el Plan Comunitario de Desarrollo Integral, el Plan de Acci\u00f3n, el Plan de Operaciones o Proyectos Comunitarios?",
+      "tipo_pregunta": 4,
+      "consulta": 19
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 132,
+    "fields": {
+      "texto_pregunta": "\u00bfPara qu\u00e9 han sido utilizados los planes que ha desarrollado la comunidad?",
+      "tipo_pregunta": 5,
+      "consulta": 19
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 133,
+    "fields": {
+      "texto_pregunta": "\u00bfSe han desarrollado Redes Socio-Productivas?",
+      "tipo_pregunta": 3,
+      "consulta": 19
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 134,
+    "fields": {
+      "texto_pregunta": "\u00bfHa sido provechoso para la comunidad el efecto que han tenido las redes socioproductivas desarrolladas?",
+      "tipo_pregunta": 4,
+      "consulta": 19
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 135,
+    "fields": {
+      "texto_pregunta": "\u00bfSe ha hecho el registro oficial del Consejo Comunal?",
+      "tipo_pregunta": 4,
+      "consulta": 19
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 136,
+    "fields": {
+      "texto_pregunta": "\u00bfTienen voceros haciendo parte del Parlamento Comunal?",
+      "tipo_pregunta": 3,
+      "consulta": 19
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 137,
+    "fields": {
+      "texto_pregunta": "\u00bfHa implicado logros para la comunidad el que existan tales vocer\u00edas?",
+      "tipo_pregunta": 4,
+      "consulta": 19
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 138,
+    "fields": {
+      "texto_pregunta": "\u00bfTienen voceros haciendo parte del Consejo de Planificaci\u00f3n de la Comuna (General)?",
+      "tipo_pregunta": 3,
+      "consulta": 19
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 139,
+    "fields": {
+      "texto_pregunta": "\u00bfHa implicado logros para la comunidad el que existan tales vocer\u00edas?",
+      "tipo_pregunta": 4,
+      "consulta": 19
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 140,
+    "fields": {
+      "texto_pregunta": "\u00bfEste Consejo Comunal ha tenido revocatorias?",
+      "tipo_pregunta": 4,
+      "consulta": 19
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 141,
+    "fields": {
+      "texto_pregunta": "\u00bfQu\u00e9 proyectos ha producido este Consejo Comunal?",
+      "tipo_pregunta": 5,
+      "consulta": 19
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 142,
+    "fields": {
+      "texto_pregunta": "\u00bfLos resultados obtenidos de la ejecuci\u00f3n de los proyectos han contribuido con el desarrollo integral de la comunidad?",
+      "tipo_pregunta": 4,
+      "consulta": 19
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 143,
+    "fields": {
+      "texto_pregunta": "\u00bfDe cu\u00e1les recursos financieros y no-financieros dispone este Consejo Comunal?",
+      "tipo_pregunta": 5,
+      "consulta": 19
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 144,
+    "fields": {
+      "texto_pregunta": "\u00bfC\u00f3mo fueron obtenidos?",
+      "tipo_pregunta": 5,
+      "consulta": 19
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 145,
+    "fields": {
+      "texto_pregunta": "\u00bfLos recursos obtenidos han sido utilizados a beneficio de la comuniad?",
+      "tipo_pregunta": 4,
+      "consulta": 19
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 146,
+    "fields": {
+      "texto_pregunta": "\u00bfEste Consejo Comunal ha abierto el Fondo de Acci\u00f3n Social?",
+      "tipo_pregunta": 4,
+      "consulta": 19
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 147,
+    "fields": {
+      "texto_pregunta": "\u00bfEste Consejo Comunal ha abierto el Fondo de Gastos Operativos y de Administraci\u00f3n?",
+      "tipo_pregunta": 4,
+      "consulta": 19
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 148,
+    "fields": {
+      "texto_pregunta": "\u00bfEste Consejo Comunal ha abierto el Fondo de Ahorro y Cr\u00e9dito Social?",
+      "tipo_pregunta": 4,
+      "consulta": 19
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 149,
+    "fields": {
+      "texto_pregunta": "\u00bfEste Consejo Comunal ha abierto el Fondo de Riesgo?",
+      "tipo_pregunta": 4,
+      "consulta": 19
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 150,
+    "fields": {
+      "texto_pregunta": "\u00bfEl Parlamento Comunal se re\u00fane con la periodicidad que corresponde?",
+      "tipo_pregunta": 4,
+      "consulta": 20
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 151,
+    "fields": {
+      "texto_pregunta": "\u00bfHacen qu\u00f3rum?",
+      "tipo_pregunta": 4,
+      "consulta": 20
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 152,
+    "fields": {
+      "texto_pregunta": "\u00bfLogran construir las decisiones en sesiones ordinarias?",
+      "tipo_pregunta": 4,
+      "consulta": 20
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 153,
+    "fields": {
+      "texto_pregunta": "\u00bfSanciona materias de su competencia, de acuerdo a lo establecido en la Ley Org\u00e1nica de las Comunas, su Reglamento y dem\u00e1s normativas aplicables?",
+      "tipo_pregunta": 4,
+      "consulta": 20
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 154,
+    "fields": {
+      "texto_pregunta": "\u00bfHa aprobado alg\u00fan plan de desarrollo comunal?",
+      "tipo_pregunta": 4,
+      "consulta": 20
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 155,
+    "fields": {
+      "texto_pregunta": "\u00bfHa sancionado las cartas comunales, previo debate y aprobaci\u00f3n por las asambleas de ciudadanos y ciudadanas de las comunidades integrantes de la Comuna?",
+      "tipo_pregunta": 4,
+      "consulta": 20
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 156,
+    "fields": {
+      "texto_pregunta": "\u00bfHa aprobado los proyectos que hayan sido sometidos a su consideraci\u00f3n por el Consejo Ejecutivo?",
+      "tipo_pregunta": 4,
+      "consulta": 20
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 157,
+    "fields": {
+      "texto_pregunta": "\u00bfHa debatido y aprobado los proyectos de solicitudes a las agencias pol\u00edtico-territoriales del Poder P\u00fablico, respecto a transferencias de competencias y servicios a la Comuna?",
+      "tipo_pregunta": 4,
+      "consulta": 20
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 158,
+    "fields": {
+      "texto_pregunta": "\u00bfHa aprobado los informes que le deben presentar oportunamente el Consejo Ejecutivo, el Consejo de Planificaci\u00f3n Comunal, el Consejo de Econom\u00eda Comunal, el Banco de la Comuna y el Consejo de Contralor\u00eda Comunal?",
+      "tipo_pregunta": 4,
+      "consulta": 20
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 159,
+    "fields": {
+      "texto_pregunta": "\u00bfDict\u00f3 su reglamento interno?",
+      "tipo_pregunta": 4,
+      "consulta": 20
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 160,
+    "fields": {
+      "texto_pregunta": "\u00bfHa designado a los y las integrantes de los Comit\u00e9s de Gesti\u00f3n?",
+      "tipo_pregunta": 4,
+      "consulta": 20
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 161,
+    "fields": {
+      "texto_pregunta": "\u00bfHa considerado asuntos de inter\u00e9s general para la Comuna, propuestos por al menos el equivalente al sesenta por ciento (60%) de los consejos comunales de la Comuna?",
+      "tipo_pregunta": 4,
+      "consulta": 20
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 162,
+    "fields": {
+      "texto_pregunta": "\u00bfHa generado la publicaci\u00f3n en gaceta comunal del Plan de Desarrollo Comunal, las cartas comunales y otras decisiones y asuntos considerables de inter\u00e9s general para los habitantes de la Comuna?",
+      "tipo_pregunta": 4,
+      "consulta": 20
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 163,
+    "fields": {
+      "texto_pregunta": "\u00bfHa rendido cuenta p\u00fablica anual de su gesti\u00f3n ante los y las habitantes de la Comuna?",
+      "tipo_pregunta": 4,
+      "consulta": 20
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 164,
+    "fields": {
+      "texto_pregunta": "\u00bfHa ejercido otras atribuciones legales y reglamentarias?",
+      "tipo_pregunta": 4,
+      "consulta": 20
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 165,
+    "fields": {
+      "texto_pregunta": "\u00bfEl Parlamento Comunal ha rendido p\u00fablicamente cuentas?",
+      "tipo_pregunta": 4,
+      "consulta": 21
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 166,
+    "fields": {
+      "texto_pregunta": "\u00bfExiste el registro o padr\u00f3n electoral de la comuna?",
+      "tipo_pregunta": 4,
+      "consulta": 21
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 167,
+    "fields": {
+      "texto_pregunta": "\u00bfSe ha producido, aprobado, publicado oficialmente e implementado el Plan de Desarrollo Comunal?",
+      "tipo_pregunta": 4,
+      "consulta": 21
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 168,
+    "fields": {
+      "texto_pregunta": "\u00bfEn alg\u00fan momento se ha ejercido revocatoria de mandato en el entorno de la Comuna?",
+      "tipo_pregunta": 4,
+      "consulta": 21
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 169,
+    "fields": {
+      "texto_pregunta": "\u00bfSe han producido, aprobado, publicado oficialmente e implementado las Cartas Comunales?",
+      "tipo_pregunta": 4,
+      "consulta": 21
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 170,
+    "fields": {
+      "texto_pregunta": "\u00bfTiene la Comuna sus voceros en el Consejo Local de Planificaci\u00f3n P\u00fablica del Municipio?",
+      "tipo_pregunta": 4,
+      "consulta": 21
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 171,
+    "fields": {
+      "texto_pregunta": "\u00bfExiste la jurisdicci\u00f3n Comunal y se han elegido los jueces?",
+      "tipo_pregunta": 4,
+      "consulta": 21
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 172,
+    "fields": {
+      "texto_pregunta": "\u00bfExisten las formas de agregaci\u00f3n: Ciudad Comunal, Federaci\u00f3n Comunal, Confederaci\u00f3n Comunal o cualquier otra, asociadas con la existencia de la Comuna?",
+      "tipo_pregunta": 4,
+      "consulta": 21
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 173,
+    "fields": {
+      "texto_pregunta": "\u00bfExisten grupos de intercambio solidario en la Comuna?",
+      "tipo_pregunta": 4,
+      "consulta": 21
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 174,
+    "fields": {
+      "texto_pregunta": "\u00bfExisten unidades productivas familiares en la Comuna?",
+      "tipo_pregunta": 4,
+      "consulta": 21
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 175,
+    "fields": {
+      "texto_pregunta": "\u00bfExisten empresas de propiedad social directa en la Comuna?",
+      "tipo_pregunta": 4,
+      "consulta": 21
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 176,
+    "fields": {
+      "texto_pregunta": "\u00bfExisten empresas de propiedad social indirecta en la Comuna?",
+      "tipo_pregunta": 4,
+      "consulta": 21
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 177,
+    "fields": {
+      "texto_pregunta": "\u00bfSe encuentra funcionando el Fondo interno de las organizaciones socio-productivas?",
+      "tipo_pregunta": 4,
+      "consulta": 21
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 178,
+    "fields": {
+      "texto_pregunta": "\u00bfSe encuentra funcionando el fondo de mantenimiento productivo?",
+      "tipo_pregunta": 4,
+      "consulta": 21
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 179,
+    "fields": {
+      "texto_pregunta": "\u00bfSe encuentra funcionando el fondo de atenci\u00f3n a los productores, productoras, prosumidores y prosumidoras?",
+      "tipo_pregunta": 4,
+      "consulta": 21
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 180,
+    "fields": {
+      "texto_pregunta": "\u00bfSe encuentra funcionando el fondo comunitario para la reinversi\u00f3n social?",
+      "tipo_pregunta": 4,
+      "consulta": 21
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 181,
+    "fields": {
+      "texto_pregunta": "\u00bfCu\u00e1les convenios ha desarrollado la organizaci\u00f3n social con el Poder P\u00fablico (Nacional; Estadal o Municipal)?",
+      "tipo_pregunta": 1,
+      "consulta": 22
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 182,
+    "fields": {
+      "texto_pregunta": "\u00bfCu\u00e1les han sido los fines y compromisos de estos convenios?",
+      "tipo_pregunta": 5,
+      "consulta": 22
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 183,
+    "fields": {
+      "texto_pregunta": "\u00bfCu\u00e1les han sido los resultados de estos convenios?",
+      "tipo_pregunta": 5,
+      "consulta": 22
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 184,
+    "fields": {
+      "texto_pregunta": "\u00bfQu\u00e9 actores o personas han sido condicionantes o determinantes para estos convenios?",
+      "tipo_pregunta": 5,
+      "consulta": 22
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 185,
+    "fields": {
+      "texto_pregunta": "\u00bfQu\u00e9 actores institucionales, para-institucionales o personales han tenido alguna relaci\u00f3n con la comunidad desde que existe?",
+      "tipo_pregunta": 5,
+      "consulta": 23
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 186,
+    "fields": {
+      "texto_pregunta": "\u00bfLos resultados de la activaci\u00f3n de tales relaciones han tra\u00eddo beneficios para la comunidad?",
+      "tipo_pregunta": 4,
+      "consulta": 23
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 187,
+    "fields": {
+      "texto_pregunta": "\u00bfCu\u00e1l ha sido la disposici\u00f3n percibida en cada uno de estos actores (especificada \u00e9sta en aliados, indiferentes o adversarios)?",
+      "tipo_pregunta": 1,
+      "consulta": 23
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 188,
+    "fields": {
+      "texto_pregunta": "\u00bfCu\u00e1l ha sido el proceso emprendido por el Gobierno Comunal o la Asamblea de Ciudadanos en el cual se ha generado modos de comunicaci\u00f3n pol\u00edtica?",
+      "tipo_pregunta": 5,
+      "consulta": 24
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 189,
+    "fields": {
+      "texto_pregunta": "\u00bfCu\u00e1les han sido los motivos, las fecha, y logros propuestos en este proceso?",
+      "tipo_pregunta": 5,
+      "consulta": 24
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 190,
+    "fields": {
+      "texto_pregunta": "\u00bfCu\u00e1l ha sido el canal de comunicaci\u00f3n empleado en este proceso?",
+      "tipo_pregunta": 5,
+      "consulta": 24
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 191,
+    "fields": {
+      "texto_pregunta": "\u00bfHan sido frecuentes estas comunicaciones?",
+      "tipo_pregunta": 4,
+      "consulta": 24
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 192,
+    "fields": {
+      "texto_pregunta": "\u00bfComo se califican los resultados obtenidos en t\u00e9rminos de difusi\u00f3n eficaz de informaci\u00f3n veraz, organizaci\u00f3n o movilizaci\u00f3n comunitaria que ha emprendido el Gobierno Comunal o la Asamblea de Ciudadanos?",
+      "tipo_pregunta": 1,
+      "consulta": 24
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 193,
+    "fields": {
+      "texto_pregunta": "Describir superficies aptas para el desarrollo agropecuario y/o de infraestructura",
+      "tipo_pregunta": 6,
+      "consulta": 25
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 194,
+    "fields": {
+      "texto_pregunta": "Describir superficies de derrumbe, hundimientos y/o deslizamientos cercanos o donde se ubiquen infraestructuras (casas, edificios, etc.) de la comunidad.",
+      "tipo_pregunta": 6,
+      "consulta": 25
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 195,
+    "fields": {
+      "texto_pregunta": "Describir incidentes con cuerpos de agua",
+      "tipo_pregunta": 5,
+      "consulta": 25
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 196,
+    "fields": {
+      "texto_pregunta": "Describir situaciones referidas a malos servicios de agua potable y/o residual",
+      "tipo_pregunta": 5,
+      "consulta": 25
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 197,
+    "fields": {
+      "texto_pregunta": "Indicar incidentes con los vientos en la comunidad",
+      "tipo_pregunta": 6,
+      "consulta": 25
+    }
+  },
+  {
+    "model": "explicacion_situacional.pregunta",
+    "pk": 198,
+    "fields": {
+      "texto_pregunta": "Describir los vientos que inciden en la comunidad e indicar los per\u00edodos de tiempo en que afectan a \u00e9sta",
+      "tipo_pregunta": 5,
+      "consulta": 18
+    }
+  }
+]

@@ -1,0 +1,53 @@
+{% extends 'base.inicio.html' %}
+{% load staticfiles %}
+{% block titulo %}_-=SAPIC-Explicacion Situacional opciones=-_{% endblock titulo %}
+  <!-- Tell the browser to be responsive to screen width -->
+{% block contenido %}
+<div class="contenido-sapic">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="panel-lateral-izq">
+            <br>
+                <div class="row">
+                        <a href="{% url 'explicacion:caracterizacion_fisica'%}">
+                        <img width="80" height="70" src="{% static 'media/iconos/11_Caracterización_Física_de_la_Comunidad.png' %}"><spam> Caracterización Física de la Comunidad</spam>
+                    </a>
+                </div>
+                <br>
+                <div class="row">
+                    <a href="{% url 'explicacion:participo_caracterizacion_economica' 2 %}">
+                        <img width="80" height="70" src="{% static 'media/iconos/modificar_datos_basicos.png' %}"><spam> Caracterización Económica de la Comunidad</spam>
+                    </a>
+                </div>
+                <br>
+                <div class="row">
+                    <a href="{% url 'explicacion:caracterizacion_social'%}">
+                        <img width="80" height="70" src="{% static 'media/iconos/13_Caracterización_de_la_Situación_Social.png' %}"><spam> Caracterización Social y de la Prestación de Servicios Públicos en la Comunidad</spam>
+                    </a>
+                </div>
+                <div class="row">
+                    <a href="{% url 'explicacion:caracterizacion_politica'%}">
+                        <img width="80" height="70" src="{% static 'media/iconos/12_Caracterización_política_de_la_Comunidad.png' %}"><spam> Caracterización Política de la Comunidad</spam>
+                    </a>
+                </div>
+                <div class="row">
+                    <a href="#">
+                        <img width="80" height="70" src="{% static 'media/iconos/14_Gestión_de_Problemas _Potencialidades_de_la_Comunidad.png' %}"><spam> Gestión de Problemas, Necesidades y Potencialidades de la Comunidad</spam>
+                    </a>
+                </div>
+                <div class="row">
+                    <a href="#">
+                        <img width="80" height="70" src="{% static 'media/iconos/modificar_datos_basicos.png' %}"><spam> Situación Objetivo de la Comunidad</spam>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div id="contenido">
+            {% block contenido_principal %}
+            {% endblock contenido_principal %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock contenido %}

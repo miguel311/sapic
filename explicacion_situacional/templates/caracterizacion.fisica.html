@@ -1,0 +1,50 @@
+{% extends 'explicacion.situacional.html' %}
+{% load staticfiles %}
+{% block titulo %}_-=SAPIC-Caracterización Física=-_{% endblock titulo %}
+{% block extrajs %}
+<script type="text/javascript" src="{% static 'explicacion_situacional/explicacion_situacional_map.js' %}"></script>
+    {{ form.media }}
+{% endblock extrajs %}
+{% block contenido_principal %}
+    <div class="col-xs-12">
+        <div class="panel-sapic">
+            <section class="content-header">
+                  <h2>
+                    Caracterización Física
+                    <small>Muestra los sub-módulos de las características físicas de la comunidad</small>
+                  </h2>
+            </section>
+            <section class="content">
+                <div class="col-lg-12 col-xs-12">
+                  <!-- small box -->
+                  <div class="small-box bg-red">
+                    <div class="inner">
+                      <h3>Ubicación Geográfica y Mapa de la comunidad</h3>
+
+                      <p align="justify">En este sub-módulo podrá registrar, consultar y modificar la ubicación geográfica de su comunidad.</p>
+                    </div>
+                    <div class="icon">
+                      <i class="ion ion-map"></i>
+                    </div>
+                    <a href="{% url 'explicacion:ubicacion_geografica' %}" class="small-box-footer">Ingresar<i class="fa fa-arrow-circle-right"></i></a>
+                  </div>
+                </div>
+                <div class="col-lg-12 col-xs-12">
+                  <!-- small box -->
+                  <div class="small-box bg-red">
+                    <div class="inner">
+                      <h3 title="Condición de suelos, vientos, aguas, viviendas y servicios públicos de mi comunidad">Condición de suelos, vientos, aguas,...</h3>
+
+                      <p align="justify">En este sub-módulo podrá registrar, consultar y modificar las condiciones de su comunidad.</p>
+                    </div>
+                    <div class="icon">
+                      <i class="ion ion-cloud"></i>
+                    </div>
+                    <a href="{% url 'explicacion:condicion_suelos' 25 %}" class="small-box-footer">Ingresar<i class="fa fa-arrow-circle-right"></i></a>
+                  </div>
+                </div>
+            </section>
+        </div>
+    </div>
+{% endblock contenido_principal %}
+

@@ -1,0 +1,570 @@
+[
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 1,
+    "fields": {
+      "texto_opcion": "Bueno",
+      "pregunta": 9
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 2,
+    "fields": {
+      "texto_opcion": "Regular",
+      "pregunta": 9
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 3,
+    "fields": {
+      "texto_opcion": "Malo",
+      "pregunta": 9
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 4,
+    "fields": {
+      "texto_opcion": "Bueno",
+      "pregunta": 11
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 5,
+    "fields": {
+      "texto_opcion": "Regular",
+      "pregunta": 11
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 6,
+    "fields": {
+      "texto_opcion": "Malo",
+      "pregunta": 11
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 7,
+    "fields": {
+      "texto_opcion": "Bueno",
+      "pregunta": 14
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 8,
+    "fields": {
+      "texto_opcion": "Regular",
+      "pregunta": 14
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 9,
+    "fields": {
+      "texto_opcion": "Malo",
+      "pregunta": 14
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 10,
+    "fields": {
+      "texto_opcion": "Bueno",
+      "pregunta": 16
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 11,
+    "fields": {
+      "texto_opcion": "Regular",
+      "pregunta": 16
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 12,
+    "fields": {
+      "texto_opcion": "Malo",
+      "pregunta": 16
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 13,
+    "fields": {
+      "texto_opcion": "Bueno",
+      "pregunta": 17
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 14,
+    "fields": {
+      "texto_opcion": "Regular",
+      "pregunta": 17
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 15,
+    "fields": {
+      "texto_opcion": "Malo",
+      "pregunta": 17
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 16,
+    "fields": {
+      "texto_opcion": "Dominio comunitario",
+      "pregunta": 25
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 17,
+    "fields": {
+      "texto_opcion": "Dominio ajeno a la comunidad",
+      "pregunta": 25
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 18,
+    "fields": {
+      "texto_opcion": "Bueno",
+      "pregunta": 45
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 19,
+    "fields": {
+      "texto_opcion": "Regular",
+      "pregunta": 45
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 20,
+    "fields": {
+      "texto_opcion": "Malo",
+      "pregunta": 45
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 21,
+    "fields": {
+      "texto_opcion": "Bueno",
+      "pregunta": 56
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 22,
+    "fields": {
+      "texto_opcion": "Regular",
+      "pregunta": 56
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 23,
+    "fields": {
+      "texto_opcion": "Malo",
+      "pregunta": 56
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 24,
+    "fields": {
+      "texto_opcion": "Bueno",
+      "pregunta": 64
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 25,
+    "fields": {
+      "texto_opcion": "Regular",
+      "pregunta": 64
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 26,
+    "fields": {
+      "texto_opcion": "Malo",
+      "pregunta": 64
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 27,
+    "fields": {
+      "texto_opcion": "Buena",
+      "pregunta": 70
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 28,
+    "fields": {
+      "texto_opcion": "Regular",
+      "pregunta": 70
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 29,
+    "fields": {
+      "texto_opcion": "Malo",
+      "pregunta": 70
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 30,
+    "fields": {
+      "texto_opcion": "Bueno",
+      "pregunta": 83
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 31,
+    "fields": {
+      "texto_opcion": "Regular",
+      "pregunta": 83
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 32,
+    "fields": {
+      "texto_opcion": "Malo",
+      "pregunta": 83
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 33,
+    "fields": {
+      "texto_opcion": "Bueno",
+      "pregunta": 86
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 34,
+    "fields": {
+      "texto_opcion": "Malo",
+      "pregunta": 86
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 35,
+    "fields": {
+      "texto_opcion": "Ninguno",
+      "pregunta": 86
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 36,
+    "fields": {
+      "texto_opcion": "Alto",
+      "pregunta": 94
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 37,
+    "fields": {
+      "texto_opcion": "Medio",
+      "pregunta": 94
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 38,
+    "fields": {
+      "texto_opcion": "Poco",
+      "pregunta": 94
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 39,
+    "fields": {
+      "texto_opcion": "Nulo",
+      "pregunta": 94
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 40,
+    "fields": {
+      "texto_opcion": "Alto",
+      "pregunta": 97
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 41,
+    "fields": {
+      "texto_opcion": "Medio",
+      "pregunta": 97
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 42,
+    "fields": {
+      "texto_opcion": "Poco",
+      "pregunta": 97
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 43,
+    "fields": {
+      "texto_opcion": "Nulo",
+      "pregunta": 97
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 44,
+    "fields": {
+      "texto_opcion": "AM",
+      "pregunta": 104
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 45,
+    "fields": {
+      "texto_opcion": "FM",
+      "pregunta": 104
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 46,
+    "fields": {
+      "texto_opcion": "Satelital directa",
+      "pregunta": 106
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 47,
+    "fields": {
+      "texto_opcion": "TDA",
+      "pregunta": 106
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 48,
+    "fields": {
+      "texto_opcion": "Abierta en UHF",
+      "pregunta": 106
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 49,
+    "fields": {
+      "texto_opcion": "Abierta en VHF",
+      "pregunta": 106
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 50,
+    "fields": {
+      "texto_opcion": "Alto",
+      "pregunta": 112
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 51,
+    "fields": {
+      "texto_opcion": "Medio",
+      "pregunta": 112
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 52,
+    "fields": {
+      "texto_opcion": "Poco",
+      "pregunta": 112
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 53,
+    "fields": {
+      "texto_opcion": "Nulo",
+      "pregunta": 112
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 54,
+    "fields": {
+      "texto_opcion": "Alto",
+      "pregunta": 119
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 55,
+    "fields": {
+      "texto_opcion": "Medio",
+      "pregunta": 119
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 56,
+    "fields": {
+      "texto_opcion": "Poco",
+      "pregunta": 119
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 57,
+    "fields": {
+      "texto_opcion": "Nulo",
+      "pregunta": 119
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 58,
+    "fields": {
+      "texto_opcion": "Alto",
+      "pregunta": 122
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 59,
+    "fields": {
+      "texto_opcion": "Medio",
+      "pregunta": 122
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 60,
+    "fields": {
+      "texto_opcion": "Poco",
+      "pregunta": 122
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 61,
+    "fields": {
+      "texto_opcion": "Nulo",
+      "pregunta": 122
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 62,
+    "fields": {
+      "texto_opcion": "Alto",
+      "pregunta": 124
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 63,
+    "fields": {
+      "texto_opcion": "Medio",
+      "pregunta": 124
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 64,
+    "fields": {
+      "texto_opcion": "Poco",
+      "pregunta": 124
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 65,
+    "fields": {
+      "texto_opcion": "Nulo",
+      "pregunta": 124
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 66,
+    "fields": {
+      "texto_opcion": "Aliados",
+      "pregunta": 187
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 67,
+    "fields": {
+      "texto_opcion": "Indiferentes",
+      "pregunta": 187
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 68,
+    "fields": {
+      "texto_opcion": "Adversarios",
+      "pregunta": 187
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 69,
+    "fields": {
+      "texto_opcion": "Satisfactorios",
+      "pregunta": 192
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 70,
+    "fields": {
+      "texto_opcion": "Medianamente satisfactorios",
+      "pregunta": 192
+    }
+  },
+  {
+    "model": "explicacion_situacional.opcion",
+    "pk": 71,
+    "fields": {
+      "texto_opcion": "No satisfactorios",
+      "pregunta": 192
+    }
+  }
+]

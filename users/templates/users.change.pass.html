@@ -1,0 +1,15 @@
+{% extends 'users.other.options.html' %}
+{% block titulo %}_-=SAPIC-Cambiar Contraseña=-_{% endblock titulo %}
+
+{% block contenido_principal %}
+        <div class="panel-sapic">
+            <div class="page-header">
+                <h2>Cambiar contraseña</h2>
+            </div>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-danger btn-block btn-fla">Cambiar</button>
+                </form>
+        </div>
+{% endblock contenido_principal %}

@@ -1,0 +1,71 @@
+{% extends 'base.inicio.html' %}
+{% load staticfiles %}
+{% block titulo %}_-=SAPIC-Consultar Usuarios=-_{% endblock titulo %}
+{% block extra_constantes %}
+    <script type="text/javascript">
+        // Objeto Json lista de usuarios
+        var LISTAR_USER = "{% url 'users:listar_users' %}"
+        ruta = '{% url 'users:modal_perfil' request.user.pk %}';
+        var user = "{{ request.user.pk }}"
+        id_user = {{request.user.pk}};
+    </script>
+{% endblock extra_constantes %}
+{% block extracss %}
+    <link rel="stylesheet" href="{% static 'DataTables/media/css/jquery.dataTables.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/checked_img.css' %}">
+{% endblock extracss %}
+{% block extrajs %}
+    <script src="{% static 'DataTables/media/js/jquery.dataTables.min.js' %}"></script>
+    <script src="{% static 'users/user_listDataTable.js' %}" type="text/javascript"></script>
+    <script src="{% static 'start/modals.js' %}"></script>
+{% endblock extrajs %}
+{% block contenido %}
+    <div class="contenido-sapic">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel-sapic">
+                    <section class="content-header">
+                      <h2>
+                        Lista de Usuarios
+                        <small>Muestra los datos de todos los usuarios Registrados</small>
+                      </h2>
+                    </section>
+                    <section class="content">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="box box-primary">
+                                    <div class="box-header">
+                                    <i class="fa fa-list"></i>
+                                    <h3 class="box-title"> Lista de Usuarios</h3>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <a href="{% url 'users:registrar'%}" class="glyphicon glyphicon-plus btn btn-block btn-primary"> Agregar Usuario</a>
+                                    </div><br><br>
+                                    <div class="box-body pad table-responsive">
+                                    <form id="forma_activar" method="post">
+                                    {% csrf_token %}
+                                        <table id="datatable" class="diplay">
+                                            <thead>
+                                                <tr>
+                                                    <th>Usuario</th>
+                                                    <th>Nombres y Apellidos</th>
+                                                    <th>Email</th>
+                                                    <th>Fecha de registro</th>
+                                                    <th>Ultima Fecha de Ingreso</th>
+                                                    <th>Activo/Inactivo</th>
+                                                    <th>Grupo</th>
+                                                    <th>Activar/Inactivar Usuarios</th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock contenido %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block titulo %}_-=SAPIC-Contraseña ha sido Recuperada=-_{% endblock titulo %}
+{% block extracss %}
+{% load staticfiles %}
+{% endblock extracss %}
+{% block extrajs %}
+{% endblock extrajs %}
+{% block contenido %}
+    <div class="contenido-sapic">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel-sapic">
+                    <div class="page-header">
+                        <h2>Recuperar contraseña</h2>
+                    </div>
+                    <p>Tu contraseña ha sido definida. Ya puedes iniciar sesión de nuevo</p>  
+                    <p><a href="{% url 'users:login' %}">Iniciar sesión</a></p>  
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock contenido %}

@@ -1,0 +1,43 @@
+{% load staticfiles %}
+<nav class="navbar navbar-default navbar-static-top">
+<!-- Este bloque puede contener un menu principal... -->
+    <div class="container-fluid">
+        <ul class="nav navbar-nav navbar-left">
+            <li><a class="btn pull-right" href="{% url 'utils:inicio' %}">
+              <span class="glyphicon glyphicon-home btn-menu-sapic" aria-hidden="true"> </span>
+          </a></li>
+            {% if 'Administradores' in request.session.grupos %}
+            <li>
+            <!-- Single button -->
+            <div class="btn-group">
+              <a class="btn pull-right dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#" >
+                  <img class="img-responsive" src="{% static 'media/iconos/usuario_icon_blanco.png' %}"/> <span class=" btn-menu-sapic" aria-hidden="true"> Admin</span>
+                  <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="{% url 'users:lista_users' %}">Listar usuarios</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="{% url 'organizaciones:registrar_organizacion'  %}">Registrar Organizaciones</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="{% url 'users:registrar_voceros' %}">Registrar Usuarios Voceros</a></li>
+                <li role="separator" class="divider"></li>
+              </ul>
+            </div>
+            </li>
+            {% endif %}
+        </ul>
+        
+        <div class="collapse navbar-collapse">
+            {% block enlaces %}
+                <!-- Para agregar enlaces -->
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a class="btn pull-right" href="{% url 'users:logout' %}">
+                          <span class="glyphicon glyphicon-log-out btn-menu-sapic" aria-hidden="true"> Cerrar Sesión</span>
+                  </a></li>
+                 </ul> 
+            {% endblock enlaces %}
+        </div>
+    </div>
+</nav>
+<hr />
+

@@ -1,0 +1,26 @@
+\beamer@endinputifotherversion {3.33pt}
+\select@language {spanish}
+\beamer@sectionintoc {1}{Cenditel}{1}{0}{1}
+\beamer@subsectionintoc {1}{1}{La Fundaci\IeC {\'o}n}{2}{0}{1}
+\beamer@subsectionintoc {1}{2}{Finalidad del Curso}{3}{0}{1}
+\beamer@subsectionintoc {1}{3}{Contenido del Curso}{4}{0}{1}
+\beamer@sectionintoc {2}{Django}{6}{0}{2}
+\beamer@subsectionintoc {2}{1}{Introducci\IeC {\'o}n}{6}{0}{2}
+\beamer@subsectionintoc {2}{2}{Configurar ambiente de trabajo}{7}{0}{2}
+\beamer@subsectionintoc {2}{3}{Crear proyecto}{9}{0}{2}
+\beamer@subsectionintoc {2}{4}{Crear aplicaciones}{13}{0}{2}
+\beamer@subsectionintoc {2}{5}{Modelos}{14}{0}{2}
+\beamer@subsectionintoc {2}{6}{Relaciones}{16}{0}{2}
+\beamer@subsectionintoc {2}{7}{Django shell y Querysets}{17}{0}{2}
+\beamer@subsectionintoc {2}{8}{Configurar URLs y primera views}{22}{0}{2}
+\beamer@subsectionintoc {2}{9}{Sistema de plantillas}{25}{0}{2}
+\beamer@subsectionintoc {2}{10}{Configurar est\IeC {\'a}ticos}{29}{0}{2}
+\beamer@subsectionintoc {2}{11}{Listar Registros}{30}{0}{2}
+\beamer@subsectionintoc {2}{12}{Anexar registros}{33}{0}{2}
+\beamer@subsectionintoc {2}{13}{Modificar y eliminar registros}{34}{0}{2}
+\beamer@subsectionintoc {2}{14}{View's}{36}{0}{2}
+\beamer@subsectionintoc {2}{15}{Crear Login}{43}{0}{2}
+\beamer@subsectionintoc {2}{16}{Registro de Usuarios}{45}{0}{2}
+\beamer@subsectionintoc {2}{17}{Login required}{47}{0}{2}
+\beamer@subsectionintoc {2}{18}{Recuperar contrase\IeC {\~n}a por correo}{48}{0}{2}
+\beamer@subsectionintoc {2}{19}{Conceptos avanzados}{49}{0}{2}

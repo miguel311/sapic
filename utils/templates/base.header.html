@@ -1,0 +1,18 @@
+{% load staticfiles %}
+<div class="cabecera-sapic">
+    <nav class="navbar navbar-default navbar-static-top">
+        <!-- Este bloque puede contener un menu de la cabecera -->
+        <div class="collapse navbar-collapse">
+            {% block enlaces_logo %}
+                <!-- Para agregar enlaces o logos -->
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a class="btn pull-right" href="{% url 'users:login' %}">
+                          <img class="img-responsive" src="{% static 'media/img/logo_sipes.png' %}"/>
+                  </a></li>
+                 </ul> 
+            {% endblock enlaces_logo %}
+        </div>
+    </nav>
+    <img class="img-responsive" src="{% static 'media/img/banner330.png' %}" />
+</div>
+<hr />

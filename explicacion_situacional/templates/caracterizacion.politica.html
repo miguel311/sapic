@@ -1,0 +1,111 @@
+{% extends 'explicacion.situacional.html' %}
+{% load staticfiles %}
+{% block titulo %}_-=SAPIC-Caracterización Política=-_{% endblock titulo %}
+{% block contenido_principal %}
+    <div class="col-xs-12">
+        <div class="panel-sapic">
+            <section class="content-header">
+                  <h2>
+                    Caracterización Política
+                    <small>Muestra los sub-módulos de las características políticas y organizacionales de la comunidad</small>
+                  </h2>
+            </section>
+            <section class="content">
+                <div class="col-lg-12 col-xs-12">
+                  <!-- small box -->
+                  <div class="small-box bg-red">
+                    <div class="inner">
+                      <h3 title="produccion cc">Producción Política del Consejo Comunal</h3>
+
+                      <p align="justify">En este sub-módulo podrá registrar, consultar y modificar información relacionada al Consejo Comunal.</p>
+                    </div>
+                    <div class="icon">
+                      <i class="ion ion-cloud"></i>
+                    </div>
+                    <a href="{% url 'explicacion:produccion_cc' 19 %}" class="small-box-footer">Ingresar<i class="fa fa-arrow-circle-right"></i></a>
+                  </div>
+                </div>
+            </section>
+            <section class="content">
+                <div class="col-lg-12 col-xs-12">
+                  <!-- small box -->
+                  <div class="small-box bg-red">
+                    <div class="inner">
+                      <h3 title="organizacion c">Organizaciones que Conforman la Comuna</h3>
+
+                      <p align="justify">En este sub-módulo podrá registrar, consultar y modificar información sobre las organizaciones de la Comuna.</p>
+                    </div>
+                    <div class="icon">
+                      <i class="ion ion-cloud"></i>
+                    </div>
+                    <a href="{% url 'explicacion:organizacion_c' 20 %}" class="small-box-footer">Ingresar<i class="fa fa-arrow-circle-right"></i></a>
+                  </div>
+                </div>
+            </section>
+            <section class="content">
+                <div class="col-lg-12 col-xs-12">
+                  <!-- small box -->
+                  <div class="small-box bg-red">
+                    <div class="inner">
+                      <h3 title="produccion c">Producción Política de la Comuna</h3>
+
+                      <p align="justify">En este sub-módulo podrá registrar, consultar y modificar información relacionada a la Comuna.</p>
+                    </div>
+                    <div class="icon">
+                      <i class="ion ion-cloud"></i>
+                    </div>
+                    <a href="{% url 'explicacion:produccion_c' 21 %}" class="small-box-footer">Ingresar<i class="fa fa-arrow-circle-right"></i></a>
+                  </div>
+                </div>
+            </section>
+            <section class="content">
+                <div class="col-lg-12 col-xs-12">
+                  <!-- small box -->
+                  <div class="small-box bg-red">
+                    <div class="inner">
+                      <h3 title="relacion entorno">Relaciones con el Entorno</h3>
+
+                      <p align="justify">En este sub-módulo podrá registrar, consultar y modificar información sobre relaciones externas.</p>
+                    </div>
+                    <div class="icon">
+                      <i class="ion ion-cloud"></i>
+                    </div>
+                    <a href="{% url 'explicacion:relacion_entorno' 22 %}" class="small-box-footer">Ingresar<i class="fa fa-arrow-circle-right"></i></a>
+                  </div>
+                </div>
+            </section>
+            <section class="content">
+                <div class="col-lg-12 col-xs-12">
+                  <!-- small box -->
+                  <div class="small-box bg-red">
+                    <div class="inner">
+                      <h3 title="actor relacionado">Actores Relacionados con la Comunidad</h3>
+
+                      <p align="justify">En este sub-módulo podrá registrar, consultar y modificar información sobre actores involucrados con la comunidad.</p>
+                    </div>
+                    <div class="icon">
+                      <i class="ion ion-cloud"></i>
+                    </div>
+                    <a href="{% url 'explicacion:actor_relacionado' 23 %}" class="small-box-footer">Ingresar<i class="fa fa-arrow-circle-right"></i></a>
+                  </div>
+                </div>
+            </section>
+            <section class="content">
+                <div class="col-lg-12 col-xs-12">
+                  <!-- small box -->
+                  <div class="small-box bg-red">
+                    <div class="inner">
+                      <h3 title="comunicacion politica">Modo de Comunicación Política</h3>
+
+                      <p align="justify">En este sub-módulo podrá registrar, consultar y modificar datos de comunicación política.</p>
+                    </div>
+                    <div class="icon">
+                      <i class="ion ion-cloud"></i>
+                    </div>
+                    <a href="{% url 'explicacion:comunicacion_politica' 24 %}" class="small-box-footer">Ingresar<i class="fa fa-arrow-circle-right"></i></a>
+                  </div>
+                </div>
+            </section>
+        </div>
+    </div>
+{% endblock contenido_principal %}

@@ -1,0 +1,252 @@
+[
+  {
+    "model": "explicacion_situacional.consulta",
+    "pk": 1,
+    "fields": {
+      "fk_caracterizacion": 1,
+      "nombre_consulta": "Informaci\u00f3n sobre propiedad y/o tenencia de tierras en mi comunidad",
+      "activa": true,
+      "user": 1
+    }
+  },
+  {
+    "model": "explicacion_situacional.consulta",
+    "pk": 2,
+    "fields": {
+      "fk_caracterizacion": 2,
+      "nombre_consulta": "Capacidad productiva de mi comunidad",
+      "activa": true,
+      "user": 1
+    }
+  },
+  {
+    "model": "explicacion_situacional.consulta",
+    "pk": 3,
+    "fields": {
+      "fk_caracterizacion": 3,
+      "nombre_consulta": "Calidad del servicio de agua potable de mi comunidad",
+      "activa": true,
+      "user": 1
+    }
+  },
+  {
+    "model": "explicacion_situacional.consulta",
+    "pk": 4,
+    "fields": {
+      "fk_caracterizacion": 3,
+      "nombre_consulta": "Calidad del servicio de energ\u00eda el\u00e9ctrica y gas de mi comunidad",
+      "activa": true,
+      "user": 1
+    }
+  },
+  {
+    "model": "explicacion_situacional.consulta",
+    "pk": 5,
+    "fields": {
+      "fk_caracterizacion": 3,
+      "nombre_consulta": "Calidad de los servicios asociados a infraestructura vial de mi comunidad",
+      "activa": true,
+      "user": 1
+    }
+  },
+  {
+    "model": "explicacion_situacional.consulta",
+    "pk": 6,
+    "fields": {
+      "fk_caracterizacion": 3,
+      "nombre_consulta": "Calidad del servicio de saneamiento ambiental de mi comunidad",
+      "activa": true,
+      "user": 1
+    }
+  },
+  {
+    "model": "explicacion_situacional.consulta",
+    "pk": 7,
+    "fields": {
+      "fk_caracterizacion": 3,
+      "nombre_consulta": "Calidad de servicios en salud de mi comunidad",
+      "activa": true,
+      "user": 1
+    }
+  },
+  {
+    "model": "explicacion_situacional.consulta",
+    "pk": 8,
+    "fields": {
+      "fk_caracterizacion": 3,
+      "nombre_consulta": "Calidad de servicios educativos de mi comunidad",
+      "activa": true,
+      "user": 1
+    }
+  },
+  {
+    "model": "explicacion_situacional.consulta",
+    "pk": 9,
+    "fields": {
+      "fk_caracterizacion": 3,
+      "nombre_consulta": "Calidad de servicios recreativos de mi comunidad",
+      "activa": true,
+      "user": 1
+    }
+  },
+  {
+    "model": "explicacion_situacional.consulta",
+    "pk": 10,
+    "fields": {
+      "fk_caracterizacion": 3,
+      "nombre_consulta": "Calidad de servicios deportivos de mi comunidad",
+      "activa": true,
+      "user": 1
+    }
+  },
+  {
+    "model": "explicacion_situacional.consulta",
+    "pk": 11,
+    "fields": {
+      "fk_caracterizacion": 3,
+      "nombre_consulta": "Calidad de servicios relacionados a manifestaciones culturales de mi comunidad",
+      "activa": true,
+      "user": 1
+    }
+  },
+  {
+    "model": "explicacion_situacional.consulta",
+    "pk": 12,
+    "fields": {
+      "fk_caracterizacion": 3,
+      "nombre_consulta": "Calidad de servicios en telecomunicaciones de mi comunidad",
+      "activa": true,
+      "user": 1
+    }
+  },
+  {
+    "model": "explicacion_situacional.consulta",
+    "pk": 13,
+    "fields": {
+      "fk_caracterizacion": 3,
+      "nombre_consulta": "Calidad de servicios de comunicaci\u00f3n social/popular de mi comunidad",
+      "activa": true,
+      "user": 1
+    }
+  },
+  {
+    "model": "explicacion_situacional.consulta",
+    "pk": 14,
+    "fields": {
+      "fk_caracterizacion": 3,
+      "nombre_consulta": "Calidad del servicio de atenci\u00f3n policial de mi comunidad",
+      "activa": true,
+      "user": 1
+    }
+  },
+  {
+    "model": "explicacion_situacional.consulta",
+    "pk": 15,
+    "fields": {
+      "fk_caracterizacion": 3,
+      "nombre_consulta": "Calidad del servicio de atenci\u00f3n de bomberos de mi comunidad",
+      "activa": true,
+      "user": 1
+    }
+  },
+  {
+    "model": "explicacion_situacional.consulta",
+    "pk": 16,
+    "fields": {
+      "fk_caracterizacion": 3,
+      "nombre_consulta": "Calidad del servicio de atenci\u00f3n de protecci\u00f3n civil de mi comunidad",
+      "activa": true,
+      "user": 1
+    }
+  },
+  {
+    "model": "explicacion_situacional.consulta",
+    "pk": 17,
+    "fields": {
+      "fk_caracterizacion": 3,
+      "nombre_consulta": "Calidad del servicio de atenci\u00f3n jurisdiccional de mi comunidad",
+      "activa": true,
+      "user": 1
+    }
+  },
+  {
+    "model": "explicacion_situacional.consulta",
+    "pk": 18,
+    "fields": {
+      "fk_caracterizacion": 3,
+      "nombre_consulta": "Incidentes de mi comunidad",
+      "activa": true,
+      "user": 1
+    }
+  },
+  {
+    "model": "explicacion_situacional.consulta",
+    "pk": 19,
+    "fields": {
+      "fk_caracterizacion": 4,
+      "nombre_consulta": "Informaci\u00f3n sobre la funci\u00f3n o producci\u00f3n pol\u00edtica de mi Consejo Comunal",
+      "activa": true,
+      "user": 1
+    }
+  },
+  {
+    "model": "explicacion_situacional.consulta",
+    "pk": 20,
+    "fields": {
+      "fk_caracterizacion": 4,
+      "nombre_consulta": "informaci\u00f3n sobre las organizaciones que conforman mi Comuna",
+      "activa": true,
+      "user": 1
+    }
+  },
+  {
+    "model": "explicacion_situacional.consulta",
+    "pk": 21,
+    "fields": {
+      "fk_caracterizacion": 4,
+      "nombre_consulta": "Informaci\u00f3n sobre la funci\u00f3n o producci\u00f3n pol\u00edtica de mi Comuna",
+      "activa": true,
+      "user": 1
+    }
+  },
+  {
+    "model": "explicacion_situacional.consulta",
+    "pk": 22,
+    "fields": {
+      "fk_caracterizacion": 4,
+      "nombre_consulta": "Relaciones intercomunitarias e institucionales con el entorno",
+      "activa": true,
+      "user": 1
+    }
+  },
+  {
+    "model": "explicacion_situacional.consulta",
+    "pk": 23,
+    "fields": {
+      "fk_caracterizacion": 4,
+      "nombre_consulta": "Informaci\u00f3n sobre actores que han tenido relaci\u00f3n con mi comunidad",
+      "activa": true,
+      "user": 1
+    }
+  },
+  {
+    "model": "explicacion_situacional.consulta",
+    "pk": 24,
+    "fields": {
+      "fk_caracterizacion": 4,
+      "nombre_consulta": "Informaci\u00f3n sobre el modo de comunicaci\u00f3n pol\u00edtica de mi comunidad",
+      "activa": true,
+      "user": 1
+    }
+  },
+  {
+    "model": "explicacion_situacional.consulta",
+    "pk": 25,
+    "fields": {
+      "fk_caracterizacion": 1,
+      "nombre_consulta": "Condici\u00f3n de suelos, vientos, aguas, viviendas y servicios p\u00fablicos de mi comunidad",
+      "activa": true,
+      "user": 1
+    }
+  }
+]

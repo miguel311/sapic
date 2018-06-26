@@ -1,0 +1,11 @@
+[
+  {
+    "model": "users.userprofile",
+    "pk": 1,
+    "fields": {
+      "fk_user": 1,
+      "fk_tipo_documento": 1,
+      "id_perfil": "18798029"
+    }
+  }
+]

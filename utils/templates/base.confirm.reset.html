@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block titulo %}_-=SAPIC-Definir Nueva Contraseña=-_{% endblock titulo %}
+{% block extracss %}
+{% load staticfiles %}
+{% endblock extracss %}
+{% block extrajs %}
+{% endblock extrajs %}
+{% block contenido %}
+    <div class="contenido-sapic">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="panel-sapic">
+                    <div class="page-header">
+                        <h2>Recuperar contraseña</h2>
+                    </div>
+                    {% if validlink %}
+
+                        <p>Por favor ingrese su nueva contraseña dos veces.<br />
+                        Así podremos verificar que es correcta.</p>
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <button type="submit" class="btn btn-danger">Recuperar</button>
+                        </form>
+
+                    {% else %}
+                        <h1>Se intento recuperar la contraseña, pero fallo.</h1>
+                        <p align="center">El vínculo de recuperación de contraseña es inválido, <br />
+                        Posiblemente ya ha sido usado <br />
+                        Por favor solicite una nueva contraseña.</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock contenido %}

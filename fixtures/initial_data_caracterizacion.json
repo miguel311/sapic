@@ -1,0 +1,34 @@
+[
+  {
+    "model": "explicacion_situacional.caracterizacion",
+    "pk": 1,
+    "fields": {
+      "caracterizacion": "Caracterizaci\u00f3n F\u00edsica",
+      "descripcion": "Describe las caracter\u00edsticas f\u00edsicas de la Organizaci\u00f3n Social"
+    }
+  },
+  {
+    "model": "explicacion_situacional.caracterizacion",
+    "pk": 2,
+    "fields": {
+      "caracterizacion": "Caracterizaci\u00f3n Econ\u00f3mica",
+      "descripcion": "Describe las caracter\u00edsticas econ\u00f3micas de la Organizaci\u00f3n Social"
+    }
+  },
+  {
+    "model": "explicacion_situacional.caracterizacion",
+    "pk": 3,
+    "fields": {
+      "caracterizacion": "Caracterizaci\u00f3n Social y de Prestaci\u00f3n de Servicios P\u00fablicos",
+      "descripcion": "Describe las caracter\u00edsticas sociales y la prestaci\u00f3n de servicios p\u00fablicos de la Organizaci\u00f3n Social"
+    }
+  },
+  {
+    "model": "explicacion_situacional.caracterizacion",
+    "pk": 4,
+    "fields": {
+      "caracterizacion": "Caracterizaci\u00f3n Pol\u00edtica",
+      "descripcion": "Describe las caracter\u00edsticas pol\u00edticas de la Organizaci\u00f3n Social"
+    }
+  }
+]
